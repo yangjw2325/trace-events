@@ -53,7 +53,7 @@ npm run jobs:automated
 
 通知只发给已经关注相关公司或事件的体验用户；页面每60秒及恢复窗口焦点时刷新。不会为新关注者补发关注前的历史变化。旧判断与原文版本不可覆盖；没有重要变化只关联证据。
 
-网站由Vercel托管，Root Directory为app，Node.js 24，区域pdx1与数据库相近。后台任务由私有仓库的GitHub Actions执行，UTC 01:00（北京时间09:00）计划启动；平台高负载可能延迟。支持workflow_dispatch手动验收和失败重跑。Vercel不再重复调度。配置服务端环境变量及Actions Secrets，验证成功后设置 CRON_SCHEDULE_ENABLED=true；真实密钥不提交代码仓库。现有Cron HTTP入口仍要求CRON_SECRET鉴权。
+网站由Vercel托管，Root Directory为app，Node.js 24，区域pdx1与数据库相近。后台任务由仓库的GitHub Actions执行，UTC 01:00（北京时间09:00）计划启动；平台高负载可能延迟。支持workflow_dispatch手动验收和失败重跑。Vercel不再重复调度。配置服务端环境变量及Actions Secrets，验证成功后设置 CRON_SCHEDULE_ENABLED=true；真实密钥不提交代码仓库。现有Cron HTTP入口仍要求CRON_SECRET鉴权。
 
 模型核验无法替代人工事实判断；待核验队列目前通过数据库及命令查看，未新增产品审核页。交易所分类映射、来源失效后的持续探测和超出查询窗口的补采尚未实现。
 
