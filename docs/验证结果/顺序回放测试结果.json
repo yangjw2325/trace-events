@@ -1,0 +1,122 @@
+{
+  "checks": {
+    "one_event": true,
+    "two_judgment_versions": true,
+    "state_sequence": true,
+    "one_important_notification": true,
+    "no_future_evidence_v1": true,
+    "no_future_evidence_v2": true,
+    "duplicate_ignored": true,
+    "persisted": true
+  },
+  "history": [
+    {
+      "document": "haier_initial",
+      "result": {
+        "event_id": "event-haier_initial",
+        "event_title": "海尔生物换股吸收合并上海莱士并募集配套资金",
+        "status": "planned",
+        "relation": "initial",
+        "summary": "海尔生物与上海莱士正在筹划由海尔生物向上海莱士全体股东发行A股股票换股吸收合并上海莱士并募集配套资金的交易；双方于2024年12月20日签署《吸收合并意向协议》，交易处于筹划阶段，尚未签署正式交易协议，且经双方协商一致可终止/解除意向协议。",
+        "evidence_claim_ids": [
+          "haier_initial:c1",
+          "haier_initial:c2",
+          "haier_initial:c3",
+          "haier_initial:c4"
+        ],
+        "reason": "当前文档首次将海尔生物与上海莱士的换股吸收合并及配套募资事项归并为候选事件；引用说法显示交易尚处筹划阶段、未签正式协议且意向协议可协商解除，故状态为planned、关系为initial。",
+        "input_document_ids": [
+          "haier_initial"
+        ],
+        "disclosed_at": "2024-12-23",
+        "generated_at": "2026-11-02T05:19:27.509683+00:00",
+        "mode": "historical_replay",
+        "judgment_changed": true
+      }
+    },
+    {
+      "document": "haier_progress",
+      "result": {
+        "event_id": "event-haier_initial",
+        "event_title": "海尔生物换股吸收合并上海莱士并募集配套资金",
+        "status": "planned",
+        "relation": "progress",
+        "summary": "海尔生物与上海莱士正在筹划由海尔生物向上海莱士全体股东发行A股股票换股吸收合并上海莱士并募集配套资金的交易；截至2024年12月28日，公司及有关各方正积极推进相关事项，公司股票继续停牌，交易仍处筹划阶段，双方尚未签署正式交易协议，具体交易方案尚存在不确定性。",
+        "evidence_claim_ids": [
+          "haier_initial:c1",
+          "haier_initial:c2",
+          "haier_initial:c3",
+          "haier_progress:c1",
+          "haier_progress:c2",
+          "haier_progress:c3",
+          "haier_progress:c4"
+        ],
+        "reason": "当前说法延续历史说法中的同一交易主体与交易方式，事项未发生终止或方案变更，仅由历史“签署意向协议、处于筹划阶段”推进为当前“各方正积极推进、股票继续停牌、尚未签署正式协议”，属于同一事件的进展更新，故关系为progress；状态维持planned。",
+        "input_document_ids": [
+          "haier_initial",
+          "haier_progress"
+        ],
+        "disclosed_at": "2024-12-28",
+        "generated_at": "2026-11-02T05:19:30.647011+00:00",
+        "mode": "historical_replay",
+        "judgment_changed": false
+      }
+    },
+    {
+      "document": "haier_termination",
+      "result": {
+        "event_id": "event-haier_initial",
+        "event_title": "海尔生物换股吸收合并上海莱士并募集配套资金",
+        "status": "terminated",
+        "relation": "progress",
+        "summary": "海尔生物与上海莱士筹划由海尔生物换股吸收合并上海莱士并募集配套资金的交易，双方于2024年12月20日签署《吸收合并意向协议》，交易尚处筹划阶段、相关方未签署正式实质性协议；现公司经审慎研究决定终止筹划本次重大资产重组，《吸收合并意向协议》自动终止且交易双方均不承担违约责任。",
+        "evidence_claim_ids": [
+          "haier_initial:c1",
+          "haier_initial:c2",
+          "haier_initial:c3",
+          "haier_initial:c4",
+          "haier_progress:c1",
+          "haier_progress:c2",
+          "haier_progress:c4",
+          "haier_termination:c1",
+          "haier_termination:c2",
+          "haier_termination:c3",
+          "haier_termination:c4"
+        ],
+        "reason": "当前公告沿用同一交易主体（海尔生物与上海莱士）及同一吸收合并并募集配套资金事项，将事件从筹划推进至终止，属于同一事件的进展（progress）而非更正；历史说法表明交易处于筹划阶段、未签正式协议且意向协议可协商解除，当前说法确认公司决定终止筹划、意向协议自动终止且双方不承担违约责任，故状态更新为terminated。",
+        "input_document_ids": [
+          "haier_initial",
+          "haier_progress",
+          "haier_termination"
+        ],
+        "disclosed_at": "2025-01-07",
+        "generated_at": "2026-11-02T05:19:34.064318+00:00",
+        "mode": "historical_replay",
+        "judgment_changed": true
+      }
+    }
+  ],
+  "notifications": [
+    {
+      "user_id": "test-reader",
+      "event_id": "event-haier_initial",
+      "version": 2,
+      "payload": "{\"status\": \"terminated\", \"reason\": \"当前公告沿用同一交易主体（海尔生物与上海莱士）及同一吸收合并并募集配套资金事项，将事件从筹划推进至终止，属于同一事件的进展（progress）而非更正；历史说法表明交易处于筹划阶段、未签正式协议且意向协议可协商解除，当前说法确认公司决定终止筹划、意向协议自动终止且双方不承担违约责任，故状态更新为terminated。\"}"
+    }
+  ],
+  "persisted_versions": [
+    {
+      "event_id": "event-haier_initial",
+      "version": 1,
+      "published": "2024-12-23",
+      "payload": "{\"event_id\": \"event-haier_initial\", \"event_title\": \"海尔生物换股吸收合并上海莱士并募集配套资金\", \"status\": \"planned\", \"relation\": \"initial\", \"summary\": \"海尔生物与上海莱士正在筹划由海尔生物向上海莱士全体股东发行A股股票换股吸收合并上海莱士并募集配套资金的交易；双方于2024年12月20日签署《吸收合并意向协议》，交易处于筹划阶段，尚未签署正式交易协议，且经双方协商一致可终止/解除意向协议。\", \"evidence_claim_ids\": [\"haier_initial:c1\", \"haier_initial:c2\", \"haier_initial:c3\", \"haier_initial:c4\"], \"reason\": \"当前文档首次将海尔生物与上海莱士的换股吸收合并及配套募资事项归并为候选事件；引用说法显示交易尚处筹划阶段、未签正式协议且意向协议可协商解除，故状态为planned、关系为initial。\", \"input_document_ids\": [\"haier_initial\"], \"disclosed_at\": \"2024-12-23\", \"generated_at\": \"2026-11-02T05:19:27.509683+00:00\", \"mode\": \"historical_replay\"}"
+    },
+    {
+      "event_id": "event-haier_initial",
+      "version": 2,
+      "published": "2025-01-07",
+      "payload": "{\"event_id\": \"event-haier_initial\", \"event_title\": \"海尔生物换股吸收合并上海莱士并募集配套资金\", \"status\": \"terminated\", \"relation\": \"progress\", \"summary\": \"海尔生物与上海莱士筹划由海尔生物换股吸收合并上海莱士并募集配套资金的交易，双方于2024年12月20日签署《吸收合并意向协议》，交易尚处筹划阶段、相关方未签署正式实质性协议；现公司经审慎研究决定终止筹划本次重大资产重组，《吸收合并意向协议》自动终止且交易双方均不承担违约责任。\", \"evidence_claim_ids\": [\"haier_initial:c1\", \"haier_initial:c2\", \"haier_initial:c3\", \"haier_initial:c4\", \"haier_progress:c1\", \"haier_progress:c2\", \"haier_progress:c4\", \"haier_termination:c1\", \"haier_termination:c2\", \"haier_termination:c3\", \"haier_termination:c4\"], \"reason\": \"当前公告沿用同一交易主体（海尔生物与上海莱士）及同一吸收合并并募集配套资金事项，将事件从筹划推进至终止，属于同一事件的进展（progress）而非更正；历史说法表明交易处于筹划阶段、未签正式协议且意向协议可协商解除，当前说法确认公司决定终止筹划、意向协议自动终止且双方不承担违约责任，故状态更新为terminated。\", \"input_document_ids\": [\"haier_initial\", \"haier_progress\", \"haier_termination\"], \"disclosed_at\": \"2025-01-07\", \"generated_at\": \"2026-11-02T05:19:34.064318+00:00\", \"mode\": \"historical_replay\"}"
+    }
+  ],
+  "scope": "sequential three-document local replay; production storage, company follow and material-change handling not connected"
+}

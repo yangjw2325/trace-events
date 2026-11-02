@@ -1,0 +1,36 @@
+{
+  "input": "Original PDF text with page and line IDs",
+  "checks": {
+    "event_separation": true,
+    "state_evolution": true,
+    "correction_target": true,
+    "correction_values": true,
+    "correction_citations": true,
+    "denial_citations": true,
+    "commitment_citations": true,
+    "denial_document": true,
+    "commitment_duration": true,
+    "expiry_rule": true,
+    "history_after_reopen": true,
+    "history_update_blocked": true
+  },
+  "usage": {
+    "prompt_tokens": 12001,
+    "completion_tokens": 2252,
+    "total_tokens": 14253,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1677
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 12001
+  },
+  "manual_review_required": [
+    "denial scope",
+    "commitment calendar boundary",
+    "classification mapping"
+  ],
+  "scope": "local harness sample; not production API, UI or full daily ingestion"
+}

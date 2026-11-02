@@ -1,0 +1,106 @@
+[
+  {
+    "case": {
+      "id": "evolution",
+      "materials": [
+        {
+          "id": "a",
+          "source": "https://static.cninfo.com.cn/finalpage/2024-12-23/1222103221.PDF",
+          "text": "海尔生物拟换股吸收合并上海莱士。双方于2024年12月20日签署吸收合并意向协议。"
+        },
+        {
+          "id": "b",
+          "source": "https://static.cninfo.com.cn/finalpage/2025-01-07/1222247046.PDF",
+          "text": "海尔生物决定终止筹划本次重大资产重组。吸收合并意向协议自动终止，股票2025年1月7日复牌。"
+        }
+      ],
+      "expected": {
+        "same_event": true,
+        "relation": "progress",
+        "current_status": "terminated"
+      }
+    },
+    "output": {
+      "same_event": true,
+      "relation": "progress",
+      "current_status": "terminated",
+      "changed_field": "status",
+      "old_value": null,
+      "new_value": null,
+      "evidence_ids": [
+        "a",
+        "b"
+      ],
+      "reason": "材料a披露拟换股吸收合并并签署意向协议；材料b披露后续决定终止筹划该重大资产重组，意向协议自动终止，属于同一事件的后续进展。"
+    },
+    "checks": {
+      "same_event": true,
+      "relation": true,
+      "current_status": true,
+      "valid_references": true
+    },
+    "usage": {
+      "prompt_tokens": 305,
+      "completion_tokens": 447,
+      "total_tokens": 752,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 367
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 305
+    }
+  },
+  {
+    "case": {
+      "id": "correction",
+      "materials": [
+        {
+          "id": "c",
+          "source": "https://static.cninfo.com.cn/finalpage/2025-09-27/1224684390.PDF",
+          "text": "贵广网络关于股票交易风险提示公告的更正公告：2025年9月24日披露的股票交易风险提示公告，生产经营风险部分年度误写为2025年度，现更正为2024年度。除上述更正内容外原公告其他内容不变。"
+        }
+      ],
+      "expected": {
+        "relation": "correction",
+        "changed_field": "year",
+        "old_value": "2025",
+        "new_value": "2024"
+      }
+    },
+    "output": {
+      "same_event": true,
+      "relation": "correction",
+      "current_status": "corrected",
+      "changed_field": "year",
+      "old_value": "2025",
+      "new_value": "2024",
+      "evidence_ids": [
+        "c"
+      ],
+      "reason": "公告明确更正2025年9月24日股票交易风险提示公告中生产经营风险部分的年度误写，将2025年度更正为2024年度。"
+    },
+    "checks": {
+      "relation": true,
+      "changed_field": true,
+      "old_value": true,
+      "new_value": true,
+      "valid_references": true
+    },
+    "usage": {
+      "prompt_tokens": 268,
+      "completion_tokens": 510,
+      "total_tokens": 778,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 420
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 268
+    }
+  }
+]
