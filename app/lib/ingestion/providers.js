@@ -2,7 +2,23 @@ import '../config.js';
 import crypto from 'node:crypto';
 export const digest=value=>crypto.createHash('sha256').update(typeof value==='string'||Buffer.isBuffer(value)?value:JSON.stringify(value)).digest('hex');
 export async function fetchRetry(url,options={}){for(let n=0;n<2;n++){try{const r=await fetch(url,{...options,signal:options.signal||AbortSignal.timeout(20000)});if(!r.ok){const e=new Error('SOURCE_HTTP_'+r.status);if(n===0&&(r.status===429||r.status>=500)){await new Promise(resolve=>setTimeout(resolve,500));continue}throw e}return r}catch(e){if(n===0&&(e.name==='TimeoutError'||e.name==='TypeError'))continue;throw e}}}
-export function unpackIfind(result){let texts=(result?.content||[]).filter(x=>x.type==='text').map(x=>x.text);let rows=[];function walk(value,depth=0){if(depth>5)return;if(typeof value==='string'){try{walk(JSON.parse(value),depth+1)}catch{try{walk(JSON.parse(value.replaceAll('\\"','"')),depth+1)}catch{}}}else if(Array.isArray(value)){for(const item of value)walk(item,depth+1)}else if(value&&typeof value==='object'){if(value['公告标题']||value['资讯标题'])rows.push(value);else if('data'in value)walk(value.data,depth+1)}}for(const text of texts)walk(text);return rows}
+export function unpackIfind(result){
+ if(result?.isError)throw new Error('IFIND_TOOL_FAILED');
+ const rows=[];
+ function walk(value,depth=0){
+  if(depth>5)throw new Error('IFIND_RESPONSE_TOO_DEEP');
+  if(typeof value==='string'){
+   let decoded;try{decoded=JSON.parse(value)}catch{try{decoded=JSON.parse(value.replaceAll('\\"','"'))}catch{if(/(失败|无权限|密钥|token.*(invalid|expired)|error)/i.test(value))throw new Error('IFIND_BUSINESS_ERROR');return}}
+   walk(decoded,depth+1);
+  }else if(Array.isArray(value)){for(const item of value)walk(item,depth+1)}
+  else if(value&&typeof value==='object'){
+   if(value.error||('code'in value&&![0,1,200,'0','1','200'].includes(value.code)))throw new Error('IFIND_BUSINESS_ERROR');
+   if(value['公告标题']||value['资讯标题'])rows.push(value);else if('data'in value)walk(value.data,depth+1);
+  }
+ }
+ for(const item of result?.content||[])if(item.type==='text')walk(item.text);
+ return rows;
+}
 export class IfindClient{
  constructor(){this.session=null;this.id=0;this.tools=[];this.url='https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-news-mcp'}
  async rpc(method,params,notification=false){const headers={'Content-Type':'application/json','Accept':'application/json, text/event-stream','Authorization':process.env.IFIND_API_KEY,'User-Agent':'trace-events/0.1'};if(this.session)headers['Mcp-Session-Id']=this.session;let body={jsonrpc:'2.0',method,...(notification?{}:{id:++this.id}),...(params?{params}:{})};let r=await fetchRetry(this.url,{method:'POST',headers,body:JSON.stringify(body)});const sid=r.headers.get('mcp-session-id');if(sid)this.session=sid;let text=await r.text();let parsed={};if(text.trim()){try{parsed=JSON.parse(text)}catch{let data=text.split('\n').filter(x=>x.startsWith('data:')).map(x=>x.slice(5).trim()).find(x=>x&&x!=='[DONE]');if(data)parsed=JSON.parse(data)}}if(parsed.error||parsed.result?.isError)throw new Error('IFIND_TOOL_FAILED');return parsed.result||parsed}
