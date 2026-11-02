@@ -1,0 +1,1942 @@
+{
+  "companies": [
+    {
+      "id": "haier",
+      "name": "海尔生物",
+      "code": "688139.SH",
+      "industry": "医疗器械",
+      "exchange": "上交所科创板"
+    },
+    {
+      "id": "raas",
+      "name": "上海莱士",
+      "code": "002252.SZ",
+      "industry": "生物制品",
+      "exchange": "深交所主板"
+    },
+    {
+      "id": "guiguang",
+      "name": "贵广网络",
+      "code": "600996.SH",
+      "industry": "广播电视",
+      "exchange": "上交所主板"
+    }
+  ],
+  "events": [
+    {
+      "id": "haier-merger",
+      "title": "海尔生物拟吸收合并上海莱士",
+      "companies": [
+        "haier",
+        "raas"
+      ],
+      "roles": {
+        "haier": "吸收合并方",
+        "raas": "被吸收合并方"
+      },
+      "status": "已终止",
+      "date": "2025-01-07",
+      "summary": "海尔生物与上海莱士筹划由海尔生物换股吸收合并上海莱士并募集配套资金的交易，双方于2024年12月20日签署《吸收合并意向协议》，交易尚处筹划阶段、相关方未签署正式实质性协议；现公司经审慎研究决定终止筹划本次重大资产重组，《吸收合并意向协议》自动终止且交易双方均不承担违约责任。",
+      "documents": [
+        "haier_initial",
+        "haier_progress",
+        "haier_termination"
+      ],
+      "versions": [
+        {
+          "event_id": "event-haier_initial",
+          "event_title": "海尔生物换股吸收合并上海莱士并募集配套资金",
+          "status": "planned",
+          "relation": "initial",
+          "summary": "海尔生物与上海莱士正在筹划由海尔生物向上海莱士全体股东发行A股股票换股吸收合并上海莱士并募集配套资金的交易；双方于2024年12月20日签署《吸收合并意向协议》，交易处于筹划阶段，尚未签署正式交易协议，且经双方协商一致可终止/解除意向协议。",
+          "evidence_claim_ids": [
+            "haier_initial:c1",
+            "haier_initial:c2",
+            "haier_initial:c3",
+            "haier_initial:c4"
+          ],
+          "reason": "当前文档首次将海尔生物与上海莱士的换股吸收合并及配套募资事项归并为候选事件；引用说法显示交易尚处筹划阶段、未签正式协议且意向协议可协商解除，故状态为planned、关系为initial。",
+          "input_document_ids": [
+            "haier_initial"
+          ],
+          "disclosed_at": "2024-12-23",
+          "generated_at": "2026-11-02T05:19:27.509683+00:00",
+          "mode": "historical_replay",
+          "version": 1,
+          "date": "2024-12-23"
+        },
+        {
+          "event_id": "event-haier_initial",
+          "event_title": "海尔生物换股吸收合并上海莱士并募集配套资金",
+          "status": "terminated",
+          "relation": "progress",
+          "summary": "海尔生物与上海莱士筹划由海尔生物换股吸收合并上海莱士并募集配套资金的交易，双方于2024年12月20日签署《吸收合并意向协议》，交易尚处筹划阶段、相关方未签署正式实质性协议；现公司经审慎研究决定终止筹划本次重大资产重组，《吸收合并意向协议》自动终止且交易双方均不承担违约责任。",
+          "evidence_claim_ids": [
+            "haier_initial:c1",
+            "haier_initial:c2",
+            "haier_initial:c3",
+            "haier_initial:c4",
+            "haier_progress:c1",
+            "haier_progress:c2",
+            "haier_progress:c4",
+            "haier_termination:c1",
+            "haier_termination:c2",
+            "haier_termination:c3",
+            "haier_termination:c4"
+          ],
+          "reason": "当前公告沿用同一交易主体（海尔生物与上海莱士）及同一吸收合并并募集配套资金事项，将事件从筹划推进至终止，属于同一事件的进展（progress）而非更正；历史说法表明交易处于筹划阶段、未签正式协议且意向协议可协商解除，当前说法确认公司决定终止筹划、意向协议自动终止且双方不承担违约责任，故状态更新为terminated。",
+          "input_document_ids": [
+            "haier_initial",
+            "haier_progress",
+            "haier_termination"
+          ],
+          "disclosed_at": "2025-01-07",
+          "generated_at": "2026-11-02T05:19:34.064318+00:00",
+          "mode": "historical_replay",
+          "version": 2,
+          "date": "2025-01-07"
+        }
+      ],
+      "uncertainties": [
+        "本次筹划已终止，不能据此推断之后重新筹划。"
+      ],
+      "kind": "重大资产重组",
+      "relations": [],
+      "importantVersion": 2
+    },
+    {
+      "id": "guiguang-year",
+      "title": "贵广网络风险提示公告年度更正",
+      "companies": [
+        "guiguang"
+      ],
+      "roles": {
+        "guiguang": "披露主体"
+      },
+      "status": "已更正",
+      "date": "2025-09-27",
+      "summary": "风险提示公告中生产经营风险的年度由2025年更正为2024年，相关金额不变。",
+      "documents": [
+        "guiguang_original",
+        "guiguang_correction"
+      ],
+      "versions": [
+        {
+          "version": 1,
+          "date": "2025-09-24",
+          "status": "原披露",
+          "summary": "原风险提示公告将该组年度财务数据表述为2025年度。",
+          "input_document_ids": [
+            "guiguang_original"
+          ],
+          "evidence_claim_ids": [],
+          "reason": "原文年度表述；随后已更正。"
+        },
+        {
+          "version": 2,
+          "date": "2025-09-27",
+          "status": "已更正",
+          "summary": "该组财务数据所属年度更正为2024年度，相关金额不变。",
+          "input_document_ids": [
+            "guiguang_original",
+            "guiguang_correction"
+          ],
+          "evidence_claim_ids": [],
+          "reason": "2025-051明确更正2025-050的生产经营风险年度。"
+        }
+      ],
+      "uncertainties": [],
+      "kind": "披露更正",
+      "relations": [
+        {
+          "source_document_id": "guiguang_correction",
+          "target_document_id": "guiguang_original",
+          "field": "year",
+          "old_value": "2025",
+          "new_value": "2024",
+          "citations": [
+            {
+              "line_id": "guiguang_correction:p1:l12",
+              "quote": "公司 2025 年度实现营业收入 1,596,259,065.48 元，比上年同期减少"
+            },
+            {
+              "line_id": "guiguang_correction:p1:l18",
+              "quote": "公司 2024 年度实现营业收入 1,596,259,065.48 元，比上年同期减少"
+            }
+          ],
+          "type": "correction"
+        }
+      ],
+      "importantVersion": 2
+    },
+    {
+      "id": "guiguang-restructuring",
+      "title": "贵广网络否认涉及酒企及云上贵州重组传闻",
+      "companies": [
+        "guiguang"
+      ],
+      "roles": {
+        "guiguang": "澄清主体"
+      },
+      "status": "已否认",
+      "date": "2025-09-24",
+      "summary": "公司在风险提示公告中明确否认与省国资体系内有关酒企、云上贵州企业重组的传闻。",
+      "documents": [
+        "guiguang_original"
+      ],
+      "versions": [
+        {
+          "version": 1,
+          "date": "2025-09-24",
+          "status": "已否认",
+          "summary": "公司否认上述具体重组传闻；传闻首发尚未定位。",
+          "input_document_ids": [
+            "guiguang_original"
+          ],
+          "evidence_claim_ids": [],
+          "reason": "风险提示公告第三节明确否认。"
+        }
+      ],
+      "uncertainties": [
+        "当前传闻内容来自公司公告转述，尚未定位原始发布者。"
+      ],
+      "kind": "传闻澄清",
+      "relations": [
+        {
+          "document_id": "guiguang_original",
+          "rumor_description": "贵广网络与省国资体系内有关酒企、云上贵州企业重组，以及公司与华为云开展重大算力合作",
+          "denial_scope": "与省国资体系内有关酒企、云上贵州企业重组及与华为云开展重大算力合作",
+          "citations": [
+            {
+              "line_id": "guiguang_original:p2:l3",
+              "quote": "公司关注到市场有关贵广网络与省国资体系内有关酒企、云上贵州企业重"
+            },
+            {
+              "line_id": "guiguang_original:p2:l4",
+              "quote": "组，以及公司与华为云开展重大算力合作相关传闻。经自查，公司不涉及上述情"
+            },
+            {
+              "line_id": "guiguang_original:p2:l5",
+              "quote": "形，市场关于公司的上述传闻不属实。"
+            }
+          ],
+          "type": "denial"
+        }
+      ],
+      "importantVersion": 1
+    },
+    {
+      "id": "guiguang-computing",
+      "title": "贵广网络否认与华为云开展重大算力合作传闻",
+      "companies": [
+        "guiguang"
+      ],
+      "roles": {
+        "guiguang": "澄清主体"
+      },
+      "status": "已否认",
+      "date": "2025-09-24",
+      "summary": "公司在风险提示公告中明确否认与华为云开展重大算力合作的传闻。",
+      "documents": [
+        "guiguang_original"
+      ],
+      "versions": [
+        {
+          "version": 1,
+          "date": "2025-09-24",
+          "status": "已否认",
+          "summary": "公司否认上述具体合作传闻；传闻首发尚未定位。",
+          "input_document_ids": [
+            "guiguang_original"
+          ],
+          "evidence_claim_ids": [],
+          "reason": "风险提示公告第三节明确否认。"
+        }
+      ],
+      "uncertainties": [
+        "当前传闻内容来自公司公告转述，尚未定位原始发布者。"
+      ],
+      "kind": "传闻澄清",
+      "relations": [
+        {
+          "document_id": "guiguang_original",
+          "rumor_description": "贵广网络与省国资体系内有关酒企、云上贵州企业重组，以及公司与华为云开展重大算力合作",
+          "denial_scope": "与省国资体系内有关酒企、云上贵州企业重组及与华为云开展重大算力合作",
+          "citations": [
+            {
+              "line_id": "guiguang_original:p2:l3",
+              "quote": "公司关注到市场有关贵广网络与省国资体系内有关酒企、云上贵州企业重"
+            },
+            {
+              "line_id": "guiguang_original:p2:l4",
+              "quote": "组，以及公司与华为云开展重大算力合作相关传闻。经自查，公司不涉及上述情"
+            },
+            {
+              "line_id": "guiguang_original:p2:l5",
+              "quote": "形，市场关于公司的上述传闻不属实。"
+            }
+          ],
+          "type": "denial"
+        }
+      ],
+      "importantVersion": 1
+    }
+  ],
+  "documents": [
+    {
+      "id": "haier_initial",
+      "source": "https://static.cninfo.com.cn/finalpage/2024-12-23/1222103221.PDF",
+      "published_date": "2024-12-23",
+      "time_precision": "date",
+      "sha256": "9a66e5cb9b1b477461e0a2fc14662d66a55413160791f24682be50fa3fd48127",
+      "fetched_at": "2026-11-02T04:53:50.746471+00:00",
+      "paragraphs": [
+        {
+          "id": "haier_initial:p1:l1",
+          "page": 1,
+          "text": "1"
+        },
+        {
+          "id": "haier_initial:p1:l2",
+          "page": 1,
+          "text": "证券代码：688139   证券简称：海尔生物   公告编号：2024-076"
+        },
+        {
+          "id": "haier_initial:p1:l3",
+          "page": 1,
+          "text": "青岛海尔生物医疗股份有限公司"
+        },
+        {
+          "id": "haier_initial:p1:l4",
+          "page": 1,
+          "text": "关于筹划重大资产重组的停牌公告"
+        },
+        {
+          "id": "haier_initial:p1:l5",
+          "page": 1,
+          "text": "本公司董事会及全体董事保证本公告内容不存在任何虚假"
+        },
+        {
+          "id": "haier_initial:p1:l6",
+          "page": 1,
+          "text": "记载、 误导性陈述或者重大遗漏， 并对其内容的真实性、 准确性"
+        },
+        {
+          "id": "haier_initial:p1:l7",
+          "page": 1,
+          "text": "和完整性承担相应的法律责任。"
+        },
+        {
+          "id": "haier_initial:p1:l8",
+          "page": 1,
+          "text": "重要内容提示："
+        },
+        {
+          "id": "haier_initial:p1:l9",
+          "page": 1,
+          "text": " 证券停复牌情况：适用"
+        },
+        {
+          "id": "haier_initial:p1:l10",
+          "page": 1,
+          "text": "因筹划重大资产重组, 本公司的相关证券停复牌情况如下："
+        },
+        {
+          "id": "haier_initial:p1:l11",
+          "page": 1,
+          "text": "证券代码 证券简称 停复牌类型 停牌起始日 停牌期间 停牌终止日 复牌日"
+        },
+        {
+          "id": "haier_initial:p1:l12",
+          "page": 1,
+          "text": "688139 海尔生物 A 股停牌 2024/12/23"
+        },
+        {
+          "id": "haier_initial:p1:l13",
+          "page": 1,
+          "text": "一、停牌事由和工作安排"
+        },
+        {
+          "id": "haier_initial:p1:l14",
+          "page": 1,
+          "text": "青岛海尔生物医疗股份有限公司（以下简称“海尔生物”或“公司”）与上海莱"
+        },
+        {
+          "id": "haier_initial:p1:l15",
+          "page": 1,
+          "text": "士血液制品股份有限公司（以下简称“上海莱士”）均为海尔集团公司控制的上市"
+        },
+        {
+          "id": "haier_initial:p1:l16",
+          "page": 1,
+          "text": "公司。为打造一流的综合性生物科技龙头、 完善血液生态产业链布局并发挥协同"
+        },
+        {
+          "id": "haier_initial:p1:l17",
+          "page": 1,
+          "text": "价值、 推动公司高质量发展，海尔生物与上海莱士正在筹划由海尔生物通过向上"
+        },
+        {
+          "id": "haier_initial:p1:l18",
+          "page": 1,
+          "text": "海莱士全体股东发行  A 股股票的方式换股吸收合并上海莱士 （以下简称“本次"
+        },
+        {
+          "id": "haier_initial:p1:l19",
+          "page": 1,
+          "text": "合并”）并发行 A 股股票募集配套资金（以下简称“本次交易”或“本次重组”）。海"
+        },
+        {
+          "id": "haier_initial:p1:l20",
+          "page": 1,
+          "text": "尔生物作为海尔集团大健康板块创新战略孵化的第一家上市公司，在生命科学领"
+        },
+        {
+          "id": "haier_initial:p1:l21",
+          "page": 1,
+          "text": "域取得良好发展态势。 海尔生物作为存续公司将进一步发挥协同效应， 通过持续"
+        },
+        {
+          "id": "haier_initial:p1:l22",
+          "page": 1,
+          "text": "的科技创新与战略外延拓展， 打造具备持续成长潜力的、 植根本土并面向全球的"
+        },
+        {
+          "id": "haier_initial:p1:l23",
+          "page": 1,
+          "text": "一流综合生物科技龙头企业。"
+        },
+        {
+          "id": "haier_initial:p2:l1",
+          "page": 2,
+          "text": "2"
+        },
+        {
+          "id": "haier_initial:p2:l2",
+          "page": 2,
+          "text": "因本次交易尚处于筹划阶段， 有关事项尚存在不确定性， 为保证公平信息披"
+        },
+        {
+          "id": "haier_initial:p2:l3",
+          "page": 2,
+          "text": "露， 维护投资者利益， 避免造成公司股价异常波动， 根据上海证券交易所的相关"
+        },
+        {
+          "id": "haier_initial:p2:l4",
+          "page": 2,
+          "text": "规定，经公司申请，公司证券（证券简称：海尔生物，证券代码：688139）拟于"
+        },
+        {
+          "id": "haier_initial:p2:l5",
+          "page": 2,
+          "text": "2024 年 12 月 23 日（星期一）开市起开始停牌，预计停牌时间不超过 10 个交易"
+        },
+        {
+          "id": "haier_initial:p2:l6",
+          "page": 2,
+          "text": "日。"
+        },
+        {
+          "id": "haier_initial:p2:l7",
+          "page": 2,
+          "text": "本次交易筹划期间，合并双方将充分考虑并有效保护交易双方上市公司的投"
+        },
+        {
+          "id": "haier_initial:p2:l8",
+          "page": 2,
+          "text": "资者， 特别是中小投资者的合法权益。停牌期间，公司将积极推进各项工作， 并"
+        },
+        {
+          "id": "haier_initial:p2:l9",
+          "page": 2,
+          "text": "根据事项进展情况， 严格按照有关法律法规的规定和要求履行信息披露义务。 待"
+        },
+        {
+          "id": "haier_initial:p2:l10",
+          "page": 2,
+          "text": "相关事项确定后， 公司将及时发布相关公告并申请公司股票复牌。 敬请广大投资"
+        },
+        {
+          "id": "haier_initial:p2:l11",
+          "page": 2,
+          "text": "者关注后续公告，并注意投资风险。"
+        },
+        {
+          "id": "haier_initial:p2:l12",
+          "page": 2,
+          "text": "二、本次重组的基本情况"
+        },
+        {
+          "id": "haier_initial:p2:l13",
+          "page": 2,
+          "text": "（一）吸收合并方基本情况"
+        },
+        {
+          "id": "haier_initial:p2:l14",
+          "page": 2,
+          "text": "公司名称  青岛海尔生物医疗股份有限公司"
+        },
+        {
+          "id": "haier_initial:p2:l15",
+          "page": 2,
+          "text": "法定代表人 刘占杰"
+        },
+        {
+          "id": "haier_initial:p2:l16",
+          "page": 2,
+          "text": "企业类型  其他股份有限公司（上市）"
+        },
+        {
+          "id": "haier_initial:p2:l17",
+          "page": 2,
+          "text": "统一社会信用代码  91370211780374731M"
+        },
+        {
+          "id": "haier_initial:p2:l18",
+          "page": 2,
+          "text": "成立日期  2005 年 10 月 28 日"
+        },
+        {
+          "id": "haier_initial:p2:l19",
+          "page": 2,
+          "text": "注册资本 31795.250800 万元人民币"
+        },
+        {
+          "id": "haier_initial:p2:l20",
+          "page": 2,
+          "text": "注册地址  山东省青岛市高新区丰源路 280 号"
+        },
+        {
+          "id": "haier_initial:p2:l21",
+          "page": 2,
+          "text": "办公地址  山东省青岛市高新区丰源路 280 号海尔生物医疗新兴产业园"
+        },
+        {
+          "id": "haier_initial:p2:l22",
+          "page": 2,
+          "text": "经营范围"
+        },
+        {
+          "id": "haier_initial:p2:l23",
+          "page": 2,
+          "text": "医疗器械的技术研发、生产、销售、售后服务及维修"
+        },
+        {
+          "id": "haier_initial:p2:l24",
+          "page": 2,
+          "text": "保养；制冷设备、机电设备、冷库、液氮生物容器、"
+        },
+        {
+          "id": "haier_initial:p2:l25",
+          "page": 2,
+          "text": "太阳能制冷产品、实验室设备、消毒器械、自动化仪"
+        },
+        {
+          "id": "haier_initial:p2:l26",
+          "page": 2,
+          "text": "器设备、电子产品、通讯产品、家用及商用电器、汽"
+        },
+        {
+          "id": "haier_initial:p2:l27",
+          "page": 2,
+          "text": "车电器的技术开发、生产、销售和售后服务；冷藏服"
+        },
+        {
+          "id": "haier_initial:p2:l28",
+          "page": 2,
+          "text": "务；物联网技术开发、咨询服务、系统集成；自动化"
+        },
+        {
+          "id": "haier_initial:p2:l29",
+          "page": 2,
+          "text": "管理系统、计算机集成系统的技术开发、销售和运维"
+        },
+        {
+          "id": "haier_initial:p2:l30",
+          "page": 2,
+          "text": "服务；软件技术开发、销售、运维服务和技术咨询；"
+        },
+        {
+          "id": "haier_initial:p2:l31",
+          "page": 2,
+          "text": "计算机网络技术开发、技术咨询；第二类增值电信业"
+        },
+        {
+          "id": "haier_initial:p2:l32",
+          "page": 2,
+          "text": "务；互联网信息服务；医疗器械互联网信息服务；化"
+        },
+        {
+          "id": "haier_initial:p2:l33",
+          "page": 2,
+          "text": "工产品（不含危险化学品及一类易制毒化学品）、生"
+        },
+        {
+          "id": "haier_initial:p2:l34",
+          "page": 2,
+          "text": "物制品、仪器仪表、实验室耗材、家具、办公自动化"
+        },
+        {
+          "id": "haier_initial:p2:l35",
+          "page": 2,
+          "text": "设备的销售；汽车新车销售；医疗器械、消毒器械、"
+        },
+        {
+          "id": "haier_initial:p3:l1",
+          "page": 3,
+          "text": "3"
+        },
+        {
+          "id": "haier_initial:p3:l2",
+          "page": 3,
+          "text": "冷库技术检测、 认证服务； 消毒服务； 机电设备安装；"
+        },
+        {
+          "id": "haier_initial:p3:l3",
+          "page": 3,
+          "text": "建筑工程设计；商务信息咨询（未经金融监管部门批"
+        },
+        {
+          "id": "haier_initial:p3:l4",
+          "page": 3,
+          "text": "准，不得从事吸收存款、融资担保、代客理财等金融"
+        },
+        {
+          "id": "haier_initial:p3:l5",
+          "page": 3,
+          "text": "业务）；电子商务（法律、法规禁止的，不得经营；"
+        },
+        {
+          "id": "haier_initial:p3:l6",
+          "page": 3,
+          "text": "应经审批的，未获批准前不得经营；法律、法规未规"
+        },
+        {
+          "id": "haier_initial:p3:l7",
+          "page": 3,
+          "text": "定审批的，自主开展经营活动）；货物专用运输（冷"
+        },
+        {
+          "id": "haier_initial:p3:l8",
+          "page": 3,
+          "text": "藏保鲜）；医疗器械租赁；货物及技术进出口。（依"
+        },
+        {
+          "id": "haier_initial:p3:l9",
+          "page": 3,
+          "text": "法须经批准的项目， 经相关部门批准后方可开展经营"
+        },
+        {
+          "id": "haier_initial:p3:l10",
+          "page": 3,
+          "text": "活动）。"
+        },
+        {
+          "id": "haier_initial:p3:l11",
+          "page": 3,
+          "text": "（二）被吸收合并方基本情况"
+        },
+        {
+          "id": "haier_initial:p3:l12",
+          "page": 3,
+          "text": "公司名称  上海莱士血液制品股份有限公司"
+        },
+        {
+          "id": "haier_initial:p3:l13",
+          "page": 3,
+          "text": "法定代表人 Jun Xu"
+        },
+        {
+          "id": "haier_initial:p3:l14",
+          "page": 3,
+          "text": "企业类型  股份有限公司（港澳台投资、上市）"
+        },
+        {
+          "id": "haier_initial:p3:l15",
+          "page": 3,
+          "text": "统一社会信用代码  913100006072419512"
+        },
+        {
+          "id": "haier_initial:p3:l16",
+          "page": 3,
+          "text": "成立日期  1988 年 10 月 29 日"
+        },
+        {
+          "id": "haier_initial:p3:l17",
+          "page": 3,
+          "text": "注册资本 663798.483700 万元人民币"
+        },
+        {
+          "id": "haier_initial:p3:l18",
+          "page": 3,
+          "text": "注册地址  上海市奉贤区望园路 2009 号"
+        },
+        {
+          "id": "haier_initial:p3:l19",
+          "page": 3,
+          "text": "办公地址  上海市奉贤区望园路 2009 号"
+        },
+        {
+          "id": "haier_initial:p3:l20",
+          "page": 3,
+          "text": "经营范围"
+        },
+        {
+          "id": "haier_initial:p3:l21",
+          "page": 3,
+          "text": "生产和销售血液制品、疫苗、诊断试剂及检测器具和"
+        },
+        {
+          "id": "haier_initial:p3:l22",
+          "page": 3,
+          "text": "检测技术并提供检测服务。【依法须经批准的项目，"
+        },
+        {
+          "id": "haier_initial:p3:l23",
+          "page": 3,
+          "text": "经相关部门批准后方可开展经营活动】"
+        },
+        {
+          "id": "haier_initial:p3:l24",
+          "page": 3,
+          "text": "（三）交易方式"
+        },
+        {
+          "id": "haier_initial:p3:l25",
+          "page": 3,
+          "text": "本次重组的交易方式为海尔生物通过向上海莱士全体股东发行 A 股股票的"
+        },
+        {
+          "id": "haier_initial:p3:l26",
+          "page": 3,
+          "text": "方式换股吸收合并上海莱士，同时发行 A 股股票募集配套资金。"
+        },
+        {
+          "id": "haier_initial:p3:l27",
+          "page": 3,
+          "text": "三、本次重组的意向性文件"
+        },
+        {
+          "id": "haier_initial:p3:l28",
+          "page": 3,
+          "text": "2024 年 12 月 20 日，公司与上海莱士签署了《吸收合并意向协议》，主要内"
+        },
+        {
+          "id": "haier_initial:p3:l29",
+          "page": 3,
+          "text": "容如下："
+        },
+        {
+          "id": "haier_initial:p3:l30",
+          "page": 3,
+          "text": "1、海尔生物拟通过向上海莱士全体股东发行  A 股股票的方式换股吸收合"
+        },
+        {
+          "id": "haier_initial:p3:l31",
+          "page": 3,
+          "text": "并上海莱士，同时发行 A 股股票募集配套资金。"
+        },
+        {
+          "id": "haier_initial:p4:l1",
+          "page": 4,
+          "text": "4"
+        },
+        {
+          "id": "haier_initial:p4:l2",
+          "page": 4,
+          "text": "2、关于本次交易的具体交易方案、换股价格、债权债务处理、员工安置、"
+        },
+        {
+          "id": "haier_initial:p4:l3",
+          "page": 4,
+          "text": "异议股东保护机制等安排将由双方沟通、 论证、 协商后， 在正式签署的交易协议"
+        },
+        {
+          "id": "haier_initial:p4:l4",
+          "page": 4,
+          "text": "中进行约定。"
+        },
+        {
+          "id": "haier_initial:p4:l5",
+          "page": 4,
+          "text": "3、本协议仅为双方的初步意向协议，双方在本次吸收合并中的具体权利义"
+        },
+        {
+          "id": "haier_initial:p4:l6",
+          "page": 4,
+          "text": "务以及各项安排以双方最终签署的正式交易协议为准。"
+        },
+        {
+          "id": "haier_initial:p4:l7",
+          "page": 4,
+          "text": "4、本次交易的前提是双方正式签署的交易协议，且依据双方的公司章程等"
+        },
+        {
+          "id": "haier_initial:p4:l8",
+          "page": 4,
+          "text": "有关规定履行相应程序审议通过， 以及取得相关有权监管机构批准后方可正式实"
+        },
+        {
+          "id": "haier_initial:p4:l9",
+          "page": 4,
+          "text": "施本次交易。"
+        },
+        {
+          "id": "haier_initial:p4:l10",
+          "page": 4,
+          "text": "5、双方同意，经双方协商一致可终止/解除本意向协议。"
+        },
+        {
+          "id": "haier_initial:p4:l11",
+          "page": 4,
+          "text": "四、风险提示"
+        },
+        {
+          "id": "haier_initial:p4:l12",
+          "page": 4,
+          "text": "本次交易正处于筹划阶段， 交易双方尚未签署正式的交易协议， 具体交易方"
+        },
+        {
+          "id": "haier_initial:p4:l13",
+          "page": 4,
+          "text": "案尚存在不确定性。 本次重组尚需履行必要的内部决策程序，以及取得相关有权"
+        },
+        {
+          "id": "haier_initial:p4:l14",
+          "page": 4,
+          "text": "监管机构批准后方可正式实施，能否实施尚存在不确定性， 有关信息均以公司指"
+        },
+        {
+          "id": "haier_initial:p4:l15",
+          "page": 4,
+          "text": "定信息披露媒体发布的公告为准。 敬请广大投资者关注后续公告并注意投资风险。"
+        },
+        {
+          "id": "haier_initial:p4:l16",
+          "page": 4,
+          "text": "特此公告。"
+        },
+        {
+          "id": "haier_initial:p4:l17",
+          "page": 4,
+          "text": "青岛海尔生物医疗股份有限公司董事会"
+        },
+        {
+          "id": "haier_initial:p4:l18",
+          "page": 4,
+          "text": "2024 年 12 月 23 日"
+        }
+      ],
+      "title": "筹划重大资产重组的停牌公告",
+      "publisher": "海尔生物",
+      "number": "2024-076",
+      "category": "重大资产重组 / 停牌",
+      "category_origin": "系统分类 · 待核验交易所原始类别",
+      "type": "公告"
+    },
+    {
+      "id": "haier_progress",
+      "source": "https://static.cninfo.com.cn/finalpage/2024-12-28/1222165730.PDF",
+      "published_date": "2024-12-28",
+      "time_precision": "date",
+      "sha256": "2b53700afd900a825cb36ef15cdc968f8af0765930ef27ebe11eac0e32f744ea",
+      "fetched_at": "2026-11-02T04:54:01.956213+00:00",
+      "paragraphs": [
+        {
+          "id": "haier_progress:p1:l1",
+          "page": 1,
+          "text": "1"
+        },
+        {
+          "id": "haier_progress:p1:l2",
+          "page": 1,
+          "text": "证券代码：688139   证券简称：海尔生物   公告编号：2024-077"
+        },
+        {
+          "id": "haier_progress:p1:l3",
+          "page": 1,
+          "text": "青岛海尔生物医疗股份有限公司"
+        },
+        {
+          "id": "haier_progress:p1:l4",
+          "page": 1,
+          "text": "关于筹划重大资产重组的停牌进展公告"
+        },
+        {
+          "id": "haier_progress:p1:l5",
+          "page": 1,
+          "text": "本公司董事会及全体董事保证本公告内容不存在任何虚假记载、"
+        },
+        {
+          "id": "haier_progress:p1:l6",
+          "page": 1,
+          "text": "误导性陈述或者重大遗漏， 并对其内容的真实性、 准确性和完整性承"
+        },
+        {
+          "id": "haier_progress:p1:l7",
+          "page": 1,
+          "text": "担相应的法律责任。"
+        },
+        {
+          "id": "haier_progress:p1:l8",
+          "page": 1,
+          "text": "青岛海尔生物医疗股份有限公司 （以下简称“海尔生物”或“公司”） 与上"
+        },
+        {
+          "id": "haier_progress:p1:l9",
+          "page": 1,
+          "text": "海莱士血液制品股份有限公司 （以下简称“上海莱士”） 正在筹划由海尔生物通"
+        },
+        {
+          "id": "haier_progress:p1:l10",
+          "page": 1,
+          "text": "过向上海莱士全体股东发行A 股股票的方式换股吸收合并上海莱士并发行A 股股"
+        },
+        {
+          "id": "haier_progress:p1:l11",
+          "page": 1,
+          "text": "票募集配套资金（以下简称“本次交易”或“本次重组”）。"
+        },
+        {
+          "id": "haier_progress:p1:l12",
+          "page": 1,
+          "text": "因本次交易尚处于筹划阶段， 有关事项尚存在不确定性， 为保证公平信息披"
+        },
+        {
+          "id": "haier_progress:p1:l13",
+          "page": 1,
+          "text": "露， 维护投资者利益， 避免造成公司股价异常波动， 根据上海证券交易所的相关"
+        },
+        {
+          "id": "haier_progress:p1:l14",
+          "page": 1,
+          "text": "规定，经公司申请，公司证券（证券简称： 海尔生物，证券代码：688139）于"
+        },
+        {
+          "id": "haier_progress:p1:l15",
+          "page": 1,
+          "text": "2024 年 12 月 23 日（星期一）开市起开始停牌，预计停牌时间不超过10 个交易"
+        },
+        {
+          "id": "haier_progress:p1:l16",
+          "page": 1,
+          "text": "日。具体内容详见公司于 2024 年 12 月 23 日在上海证券交易所网站（www.sse."
+        },
+        {
+          "id": "haier_progress:p1:l17",
+          "page": 1,
+          "text": "com.cn） 披露的 《青岛海尔生物医疗股份有限公司关于筹划重大资产重组的停牌"
+        },
+        {
+          "id": "haier_progress:p1:l18",
+          "page": 1,
+          "text": "公告》 （公告编号：2024-076）。"
+        },
+        {
+          "id": "haier_progress:p1:l19",
+          "page": 1,
+          "text": "截至本公告披露之日， 公司以及有关各方正在积极推进本次交易事项的相关"
+        },
+        {
+          "id": "haier_progress:p1:l20",
+          "page": 1,
+          "text": "工作。 为维护广大投资者利益， 避免公司股价出现异常波动， 根据上海证券交易"
+        },
+        {
+          "id": "haier_progress:p1:l21",
+          "page": 1,
+          "text": "所的相关规定， 公司股票将继续停牌。待相关事项确定后， 公司将及时发布相关"
+        },
+        {
+          "id": "haier_progress:p1:l22",
+          "page": 1,
+          "text": "公告并申请公司股票复牌。"
+        },
+        {
+          "id": "haier_progress:p1:l23",
+          "page": 1,
+          "text": "本次交易正处于筹划阶段， 交易双方尚未签署正式的交易协议， 具体交易方"
+        },
+        {
+          "id": "haier_progress:p1:l24",
+          "page": 1,
+          "text": "案尚存在不确定性。 本次重组尚需履行必要的内部决策程序，以及取得相关有权"
+        },
+        {
+          "id": "haier_progress:p2:l1",
+          "page": 2,
+          "text": "2"
+        },
+        {
+          "id": "haier_progress:p2:l2",
+          "page": 2,
+          "text": "监管机构批准后方可正式实施，能否实施尚存在不确定性， 有关信息均以公司指"
+        },
+        {
+          "id": "haier_progress:p2:l3",
+          "page": 2,
+          "text": "定信息披露媒体发布的公告为准。 敬请广大投资者关注后续公告并注意投资风险。"
+        },
+        {
+          "id": "haier_progress:p2:l4",
+          "page": 2,
+          "text": "特此公告。"
+        },
+        {
+          "id": "haier_progress:p2:l5",
+          "page": 2,
+          "text": "青岛海尔生物医疗股份有限公司董事会"
+        },
+        {
+          "id": "haier_progress:p2:l6",
+          "page": 2,
+          "text": "2024 年 12 月 28 日"
+        }
+      ],
+      "title": "筹划重大资产重组的停牌进展公告",
+      "publisher": "海尔生物",
+      "number": "2024-077",
+      "category": "重大资产重组 / 进展",
+      "category_origin": "系统分类 · 待核验交易所原始类别",
+      "type": "公告"
+    },
+    {
+      "id": "haier_termination",
+      "source": "https://static.cninfo.com.cn/finalpage/2025-01-07/1222247046.PDF",
+      "published_date": "2025-01-07",
+      "time_precision": "date",
+      "sha256": "5b14c715a05c9271fe35c499f19a5b9f76d8f7c5ef8bec049b8d3cb0b4e80f1b",
+      "fetched_at": "2026-11-02T04:54:05.430553+00:00",
+      "paragraphs": [
+        {
+          "id": "haier_termination:p1:l1",
+          "page": 1,
+          "text": "1"
+        },
+        {
+          "id": "haier_termination:p1:l2",
+          "page": 1,
+          "text": "证券代码：688139     证券简称：海尔生物   公告编号：2025-003"
+        },
+        {
+          "id": "haier_termination:p1:l3",
+          "page": 1,
+          "text": "青岛海尔生物医疗股份有限公司"
+        },
+        {
+          "id": "haier_termination:p1:l4",
+          "page": 1,
+          "text": "关于终止筹划重大资产重组暨公司股票复牌公告"
+        },
+        {
+          "id": "haier_termination:p1:l5",
+          "page": 1,
+          "text": "本公司董事会及全体董事保证本公告内容不存在任何虚假记载、 误"
+        },
+        {
+          "id": "haier_termination:p1:l6",
+          "page": 1,
+          "text": "导性陈述或者重大遗漏，并对其内容的真实性、准确性和完整性承担"
+        },
+        {
+          "id": "haier_termination:p1:l7",
+          "page": 1,
+          "text": "法律责任。"
+        },
+        {
+          "id": "haier_termination:p1:l8",
+          "page": 1,
+          "text": "重要内容提示："
+        },
+        {
+          "id": "haier_termination:p1:l9",
+          "page": 1,
+          "text": " 证券停复牌情况：适用"
+        },
+        {
+          "id": "haier_termination:p1:l10",
+          "page": 1,
+          "text": "因终止筹划重大资产重组,本公司的相关证券停复牌情况如下："
+        },
+        {
+          "id": "haier_termination:p1:l11",
+          "page": 1,
+          "text": "证券代码 证券简称 停复牌类型 停牌起始日"
+        },
+        {
+          "id": "haier_termination:p1:l12",
+          "page": 1,
+          "text": "停牌"
+        },
+        {
+          "id": "haier_termination:p1:l13",
+          "page": 1,
+          "text": "期间"
+        },
+        {
+          "id": "haier_termination:p1:l14",
+          "page": 1,
+          "text": "停牌终止日 复牌日"
+        },
+        {
+          "id": "haier_termination:p1:l15",
+          "page": 1,
+          "text": "688139 海尔生物 A 股 复牌     2025/1/6 2025/1/7"
+        },
+        {
+          "id": "haier_termination:p1:l16",
+          "page": 1,
+          "text": "青岛海尔生物医疗股份有限公司（以下简称“海尔生物”或“公司” ）因筹划"
+        },
+        {
+          "id": "haier_termination:p1:l17",
+          "page": 1,
+          "text": "由海尔生物通过向上海莱士血液制品股份有限公司（以下简称“上海莱士” ）全体"
+        },
+        {
+          "id": "haier_termination:p1:l18",
+          "page": 1,
+          "text": "股东发行A 股股票的方式换股吸收合并上海莱士并发行A 股股票募集配套资金 （以"
+        },
+        {
+          "id": "haier_termination:p1:l19",
+          "page": 1,
+          "text": "下简称“本次交易”或“本次重大资产重组” ）事项，公司股票于2024 年 12 月 23"
+        },
+        {
+          "id": "haier_termination:p1:l20",
+          "page": 1,
+          "text": "日（星期一）开市起开始停牌。经审慎研究，公司决定终止筹划本次重大资产重"
+        },
+        {
+          "id": "haier_termination:p1:l21",
+          "page": 1,
+          "text": "组事项，公司股票自2025 年 1 月 7 日（星期二）开市起复牌。现将有关情况公告"
+        },
+        {
+          "id": "haier_termination:p1:l22",
+          "page": 1,
+          "text": "如下："
+        },
+        {
+          "id": "haier_termination:p1:l23",
+          "page": 1,
+          "text": "一、本次筹划重大资产重组的基本情况"
+        },
+        {
+          "id": "haier_termination:p2:l1",
+          "page": 2,
+          "text": "2"
+        },
+        {
+          "id": "haier_termination:p2:l2",
+          "page": 2,
+          "text": "公司与上海莱士于 2024 年 12 月 20 日签订了《吸收合并意向协议》 ，拟由海"
+        },
+        {
+          "id": "haier_termination:p2:l3",
+          "page": 2,
+          "text": "尔生物通过向上海莱士全体股东发行 A 股股票的方式换股吸收合并上海莱士并发"
+        },
+        {
+          "id": "haier_termination:p2:l4",
+          "page": 2,
+          "text": "行A 股股票募集配套资金。"
+        },
+        {
+          "id": "haier_termination:p2:l5",
+          "page": 2,
+          "text": "根据《上市公司重大资产重组管理办法》的规定，本次交易构成重大资产重"
+        },
+        {
+          "id": "haier_termination:p2:l6",
+          "page": 2,
+          "text": "组，为保证公平信息披露，维护投资者利益，避免造成公司股价异常波动，根据"
+        },
+        {
+          "id": "haier_termination:p2:l7",
+          "page": 2,
+          "text": "上海证券交易所的相关规定，经公司申请，公司证券（证券简称：海尔生物，证"
+        },
+        {
+          "id": "haier_termination:p2:l8",
+          "page": 2,
+          "text": "券代码：688139）于2024 年 12 月23 日（星期一）开市起开始停牌，预计停牌时"
+        },
+        {
+          "id": "haier_termination:p2:l9",
+          "page": 2,
+          "text": "间不超过10 个交易日。具体内容详见公司分别于2024 年 12 月 23 日、2024 年 12"
+        },
+        {
+          "id": "haier_termination:p2:l10",
+          "page": 2,
+          "text": "月28 日在上海证券交易所网站（www.sse.com.cn）披露的《青岛海尔生物医疗股"
+        },
+        {
+          "id": "haier_termination:p2:l11",
+          "page": 2,
+          "text": "份有限公司关于筹划重大资产重组的停牌公告》 （公告编号：2024-076）及《青岛"
+        },
+        {
+          "id": "haier_termination:p2:l12",
+          "page": 2,
+          "text": "海尔生物医疗股份有限公司关于筹划重大资产重组的停牌进展公告》 （公告编号："
+        },
+        {
+          "id": "haier_termination:p2:l13",
+          "page": 2,
+          "text": "2024-077）。"
+        },
+        {
+          "id": "haier_termination:p2:l14",
+          "page": 2,
+          "text": "二、公司在筹划及推进重大资产重组期间所做的主要工作"
+        },
+        {
+          "id": "haier_termination:p2:l15",
+          "page": 2,
+          "text": "公司股票停牌期间，公司严格按照中国证监会和上海证券交易所的有关规定，"
+        },
+        {
+          "id": "haier_termination:p2:l16",
+          "page": 2,
+          "text": "与相关各方积极推进本次重大资产重组相关工作，并就本次重大资产重组的重要"
+        },
+        {
+          "id": "haier_termination:p2:l17",
+          "page": 2,
+          "text": "事项与交易相关各方进行了积极、充分的沟通。公司根据相关规定披露了筹划重"
+        },
+        {
+          "id": "haier_termination:p2:l18",
+          "page": 2,
+          "text": "大资产重组停牌进展公告，并在公告中充分披露了本次重大资产重组存在的风险。"
+        },
+        {
+          "id": "haier_termination:p2:l19",
+          "page": 2,
+          "text": "公司按照相关监管规定，对本次重大资产重组涉及的内幕信息知情人进 行了登记"
+        },
+        {
+          "id": "haier_termination:p2:l20",
+          "page": 2,
+          "text": "和申报，编制了交易进程备忘录。"
+        },
+        {
+          "id": "haier_termination:p2:l21",
+          "page": 2,
+          "text": "三、终止筹划本次重大资产重组的原因"
+        },
+        {
+          "id": "haier_termination:p2:l22",
+          "page": 2,
+          "text": "筹划本次重大资产重组以来，公司及相关各方严格按照相关法律法规的要求，"
+        },
+        {
+          "id": "haier_termination:p2:l23",
+          "page": 2,
+          "text": "积极推动本次重大资产重组相关的各项工作，与本次重大资产重组的交易对方和"
+        },
+        {
+          "id": "haier_termination:p2:l24",
+          "page": 2,
+          "text": "吸收合并双方的主要股东进行了积极磋商、反复探讨和沟通。由于本次交易结构"
+        },
+        {
+          "id": "haier_termination:p2:l25",
+          "page": 2,
+          "text": "较为复杂，尚未能形成相关各方认可的具体方案。经审慎研究相关各方意见并经"
+        },
+        {
+          "id": "haier_termination:p2:l26",
+          "page": 2,
+          "text": "交易双方协商一致，为切实维护上市公司及广大投资者利益，交易双方决定终止"
+        },
+        {
+          "id": "haier_termination:p2:l27",
+          "page": 2,
+          "text": "筹划本次重大资产重组事项。同时， 《吸收合并意向协议》自动终止，交易双方均"
+        },
+        {
+          "id": "haier_termination:p2:l28",
+          "page": 2,
+          "text": "不承担违约责任。"
+        },
+        {
+          "id": "haier_termination:p3:l1",
+          "page": 3,
+          "text": "3"
+        },
+        {
+          "id": "haier_termination:p3:l2",
+          "page": 3,
+          "text": "四、本次终止重大资产重组对公司的影响"
+        },
+        {
+          "id": "haier_termination:p3:l3",
+          "page": 3,
+          "text": "本次交易尚处于筹划阶段，交易相关方均未就具体方案最终签署正式实质性"
+        },
+        {
+          "id": "haier_termination:p3:l4",
+          "page": 3,
+          "text": "协议，相关议案尚未提交公司董事会及股东大会审议，重组事项尚未正式实施，"
+        },
+        {
+          "id": "haier_termination:p3:l5",
+          "page": 3,
+          "text": "交易双方对终止本次重大资产重组无需承担任何违约责任。本次终止筹划重大资"
+        },
+        {
+          "id": "haier_termination:p3:l6",
+          "page": 3,
+          "text": "产重组事项不会对公司业务开展、生产经营活动和财务状况造成不利影响，亦不"
+        },
+        {
+          "id": "haier_termination:p3:l7",
+          "page": 3,
+          "text": "存在损害公司及股东特别是中小股东利益的情形。"
+        },
+        {
+          "id": "haier_termination:p3:l8",
+          "page": 3,
+          "text": "五、股票复牌安排及承诺事项"
+        },
+        {
+          "id": "haier_termination:p3:l9",
+          "page": 3,
+          "text": "公司股票将于 2025 年 1 月 7 日（星期二）开市起复牌。公司承诺，本公告披"
+        },
+        {
+          "id": "haier_termination:p3:l10",
+          "page": 3,
+          "text": "露之日起1 个月内不再筹划重大资产重组。"
+        },
+        {
+          "id": "haier_termination:p3:l11",
+          "page": 3,
+          "text": "公司郑重提醒广大投资者，公司 有关信息均以公司指定信息披露媒体发布的"
+        },
+        {
+          "id": "haier_termination:p3:l12",
+          "page": 3,
+          "text": "公告为准。敬请广大投资者关注后续公告并注意投资风险。"
+        },
+        {
+          "id": "haier_termination:p3:l13",
+          "page": 3,
+          "text": "特此公告。"
+        },
+        {
+          "id": "haier_termination:p3:l14",
+          "page": 3,
+          "text": "青岛海尔生物医疗股份有限公司董事会"
+        },
+        {
+          "id": "haier_termination:p3:l15",
+          "page": 3,
+          "text": "2025 年 1 月 7 日"
+        }
+      ],
+      "title": "终止筹划重大资产重组暨公司股票复牌公告",
+      "publisher": "海尔生物",
+      "number": "2025-003",
+      "category": "重大资产重组 / 终止",
+      "category_origin": "系统分类 · 待核验交易所原始类别",
+      "type": "公告"
+    },
+    {
+      "id": "guiguang_original",
+      "source": "https://static.cninfo.com.cn/finalpage/2025-09-24/1224676851.PDF",
+      "published_date": "2025-09-24",
+      "time_precision": "date",
+      "sha256": "2cf9a56d0e77b888d4b113cee61f77916f08b7d29659e8aa08fe01b099466a12",
+      "fetched_at": "2026-11-02T04:54:15.066113+00:00",
+      "paragraphs": [
+        {
+          "id": "guiguang_original:p1:l1",
+          "page": 1,
+          "text": "1"
+        },
+        {
+          "id": "guiguang_original:p1:l2",
+          "page": 1,
+          "text": "证券代码：600996 证券简称：贵广网络 公告编号：2025-050"
+        },
+        {
+          "id": "guiguang_original:p1:l3",
+          "page": 1,
+          "text": "贵州省广播电视信息网络股份有限公司"
+        },
+        {
+          "id": "guiguang_original:p1:l4",
+          "page": 1,
+          "text": "股票交易风险提示公告"
+        },
+        {
+          "id": "guiguang_original:p1:l5",
+          "page": 1,
+          "text": "本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述"
+        },
+        {
+          "id": "guiguang_original:p1:l6",
+          "page": 1,
+          "text": "或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。"
+        },
+        {
+          "id": "guiguang_original:p1:l7",
+          "page": 1,
+          "text": "贵州省广播电视信息网络股份有限公司（简称“公司”）股票于 2025 年 9"
+        },
+        {
+          "id": "guiguang_original:p1:l8",
+          "page": 1,
+          "text": "月 19 日、9 月 22 日连续两个交易日收盘价格涨幅偏离值累计超过 20%，构成《上"
+        },
+        {
+          "id": "guiguang_original:p1:l9",
+          "page": 1,
+          "text": "海证券交易所交易规则》规定的股票交易异常波动情况，公司已于 2025 年 9 月"
+        },
+        {
+          "id": "guiguang_original:p1:l10",
+          "page": 1,
+          "text": "23 日披露了《股票交易异常波动公告》（公告编号：2025-049）。2025 年 9 月"
+        },
+        {
+          "id": "guiguang_original:p1:l11",
+          "page": 1,
+          "text": "23 日，公司股票以涨停价收盘，股票价格近期波动较大，现将相关风险提示如"
+        },
+        {
+          "id": "guiguang_original:p1:l12",
+          "page": 1,
+          "text": "下："
+        },
+        {
+          "id": "guiguang_original:p1:l13",
+          "page": 1,
+          "text": "一、二级市场交易风险"
+        },
+        {
+          "id": "guiguang_original:p1:l14",
+          "page": 1,
+          "text": "公司股票于 2025 年 9 月 19 日、9 月 22 日连续两个交易日收盘价格涨幅偏"
+        },
+        {
+          "id": "guiguang_original:p1:l15",
+          "page": 1,
+          "text": "离值累计超过 20%，构成《上海证券交易所交易规则》规定的股票交易异常波动"
+        },
+        {
+          "id": "guiguang_original:p1:l16",
+          "page": 1,
+          "text": "情况。2025 年 9 月 23 日，公司股票换手率为 6.14%，当日收盘价较 2025 年 9"
+        },
+        {
+          "id": "guiguang_original:p1:l17",
+          "page": 1,
+          "text": "月 18 日收盘价累计涨幅为 33.17%，鉴于近日公司股价波动幅度较大，公司股价"
+        },
+        {
+          "id": "guiguang_original:p1:l18",
+          "page": 1,
+          "text": "存在短期上涨过快后的下跌风险。公司敬请广大投资者注意投资风险，理性决策，"
+        },
+        {
+          "id": "guiguang_original:p1:l19",
+          "page": 1,
+          "text": "审慎投资。"
+        },
+        {
+          "id": "guiguang_original:p1:l20",
+          "page": 1,
+          "text": "二、生产经营风险"
+        },
+        {
+          "id": "guiguang_original:p1:l21",
+          "page": 1,
+          "text": "公司 2025 年度实现营业收入 1,596,259,065.48 元，比上年同期减少"
+        },
+        {
+          "id": "guiguang_original:p1:l22",
+          "page": 1,
+          "text": "13.83%；归属于上市公司股东的净利润为-1,084,247,001.94 元，比上年同期减"
+        },
+        {
+          "id": "guiguang_original:p1:l23",
+          "page": 1,
+          "text": "亏 21.71% ； 归 属 于 上 市 公 司 股 东 的 扣 除 非 经 常 性 损 益 的 净 利 润 为"
+        },
+        {
+          "id": "guiguang_original:p1:l24",
+          "page": 1,
+          "text": "-1,194,266,119.58 元，比上年同期减亏 18.17%；基本每股收益为-0.89 元。"
+        },
+        {
+          "id": "guiguang_original:p1:l25",
+          "page": 1,
+          "text": "公司于 2025 年 8 月 28 日披露《2025 年半年度报告》，公司 2025 年上半年"
+        },
+        {
+          "id": "guiguang_original:p1:l26",
+          "page": 1,
+          "text": "度实现营业收入 616,220,804.14 元，比上年同期减少 30.71%；归属于上市公司"
+        },
+        {
+          "id": "guiguang_original:p1:l27",
+          "page": 1,
+          "text": "股东的净利润-562,252,749.23 元，比上年同期亏损增加 34.11%；归属于上市公"
+        },
+        {
+          "id": "guiguang_original:p1:l28",
+          "page": 1,
+          "text": "司股东的扣除非经常性损益的净利润-596,665,207.45 元，比上年同期亏损增加"
+        },
+        {
+          "id": "guiguang_original:p1:l29",
+          "page": 1,
+          "text": "21.56%；基本每股收益为-0.45 元。"
+        },
+        {
+          "id": "guiguang_original:p2:l1",
+          "page": 2,
+          "text": "2"
+        },
+        {
+          "id": "guiguang_original:p2:l2",
+          "page": 2,
+          "text": "三、媒体报道、市场传闻、热点概念情况"
+        },
+        {
+          "id": "guiguang_original:p2:l3",
+          "page": 2,
+          "text": "公司关注到市场有关贵广网络与省国资体系内有关酒企、云上贵州企业重"
+        },
+        {
+          "id": "guiguang_original:p2:l4",
+          "page": 2,
+          "text": "组，以及公司与华为云开展重大算力合作相关传闻。经自查，公司不涉及上述情"
+        },
+        {
+          "id": "guiguang_original:p2:l5",
+          "page": 2,
+          "text": "形，市场关于公司的上述传闻不属实。"
+        },
+        {
+          "id": "guiguang_original:p2:l6",
+          "page": 2,
+          "text": "四、相关风险提示"
+        },
+        {
+          "id": "guiguang_original:p2:l7",
+          "page": 2,
+          "text": "公司郑重提醒广大投资者，公司相关信息以公司在上海证券交易所网站"
+        },
+        {
+          "id": "guiguang_original:p2:l8",
+          "page": 2,
+          "text": "（www.sse.com.cn）和法定信息披露媒体《上海证券报》刊登的相关公告为准。"
+        },
+        {
+          "id": "guiguang_original:p2:l9",
+          "page": 2,
+          "text": "公司将严格按照有关法律法规的规定和要求，及时履行信息披露义务。敬请广大"
+        },
+        {
+          "id": "guiguang_original:p2:l10",
+          "page": 2,
+          "text": "投资者注意投资风险，理性决策，审慎投资。"
+        },
+        {
+          "id": "guiguang_original:p2:l11",
+          "page": 2,
+          "text": "特此公告。"
+        },
+        {
+          "id": "guiguang_original:p2:l12",
+          "page": 2,
+          "text": "贵州省广播电视信息网络股份有限公司董事会"
+        },
+        {
+          "id": "guiguang_original:p2:l13",
+          "page": 2,
+          "text": "2025 年 9月 24 日"
+        }
+      ],
+      "title": "股票交易风险提示公告",
+      "publisher": "贵广网络",
+      "number": "2025-050",
+      "category": "股票交易风险提示",
+      "category_origin": "系统分类 · 待核验交易所原始类别",
+      "type": "公告"
+    },
+    {
+      "id": "guiguang_correction",
+      "source": "https://static.cninfo.com.cn/finalpage/2025-09-27/1224684390.PDF",
+      "published_date": "2025-09-27",
+      "time_precision": "date",
+      "sha256": "4c0e00dcc432cd03759a711c802b86cb62d9fb4ca65f1600baeef2b645c65590",
+      "fetched_at": "2026-11-02T04:54:17.579632+00:00",
+      "paragraphs": [
+        {
+          "id": "guiguang_correction:p1:l1",
+          "page": 1,
+          "text": "1"
+        },
+        {
+          "id": "guiguang_correction:p1:l2",
+          "page": 1,
+          "text": "证券代码：600996 证券简称：贵广网络 公告编号：2025-051"
+        },
+        {
+          "id": "guiguang_correction:p1:l3",
+          "page": 1,
+          "text": "贵州省广播电视信息网络股份有限公司"
+        },
+        {
+          "id": "guiguang_correction:p1:l4",
+          "page": 1,
+          "text": "关于股票交易风险提示公告的更正公告"
+        },
+        {
+          "id": "guiguang_correction:p1:l5",
+          "page": 1,
+          "text": "本公司董事会及全体董事保证本公告内容不存在任何虚假记载、误导性陈述"
+        },
+        {
+          "id": "guiguang_correction:p1:l6",
+          "page": 1,
+          "text": "或者重大遗漏，并对其内容的真实性、准确性和完整性承担法律责任。"
+        },
+        {
+          "id": "guiguang_correction:p1:l7",
+          "page": 1,
+          "text": "贵州省广播电视信息网络股份有限公司（简称“公司”）于 2025 年9 月 24"
+        },
+        {
+          "id": "guiguang_correction:p1:l8",
+          "page": 1,
+          "text": "日在上海证券交易所网站（www.sse.com.cn）披露了《股票交易风险提示公告》，"
+        },
+        {
+          "id": "guiguang_correction:p1:l9",
+          "page": 1,
+          "text": "后经发现公告内容存在错误，现更正如下："
+        },
+        {
+          "id": "guiguang_correction:p1:l10",
+          "page": 1,
+          "text": "更正前的内容："
+        },
+        {
+          "id": "guiguang_correction:p1:l11",
+          "page": 1,
+          "text": "二、生产经营风险"
+        },
+        {
+          "id": "guiguang_correction:p1:l12",
+          "page": 1,
+          "text": "公司 2025 年度实现营业收入 1,596,259,065.48 元，比上年同期减少"
+        },
+        {
+          "id": "guiguang_correction:p1:l13",
+          "page": 1,
+          "text": "13.83%；归属于上市公司股东的净利润为-1,084,247,001.94 元，比上年同期减"
+        },
+        {
+          "id": "guiguang_correction:p1:l14",
+          "page": 1,
+          "text": "亏 21.71% ； 归 属 于 上 市 公 司 股 东 的 扣 除 非 经 常 性 损 益 的 净 利 润 为"
+        },
+        {
+          "id": "guiguang_correction:p1:l15",
+          "page": 1,
+          "text": "-1,194,266,119.58 元，比上年同期减亏 18.17%；基本每股收益为-0.89 元。"
+        },
+        {
+          "id": "guiguang_correction:p1:l16",
+          "page": 1,
+          "text": "更正后的内容："
+        },
+        {
+          "id": "guiguang_correction:p1:l17",
+          "page": 1,
+          "text": "二、生产经营风险"
+        },
+        {
+          "id": "guiguang_correction:p1:l18",
+          "page": 1,
+          "text": "公司 2024 年度实现营业收入 1,596,259,065.48 元，比上年同期减少"
+        },
+        {
+          "id": "guiguang_correction:p1:l19",
+          "page": 1,
+          "text": "13.83%；归属于上市公司股东的净利润为-1,084,247,001.94 元，比上年同期减"
+        },
+        {
+          "id": "guiguang_correction:p1:l20",
+          "page": 1,
+          "text": "亏 21.71% ； 归 属 于 上 市 公 司 股 东 的 扣 除 非 经 常 性 损 益 的 净 利 润 为"
+        },
+        {
+          "id": "guiguang_correction:p1:l21",
+          "page": 1,
+          "text": "-1,194,266,119.58 元，比上年同期减亏 18.17%；基本每股收益为-0.89 元。"
+        },
+        {
+          "id": "guiguang_correction:p1:l22",
+          "page": 1,
+          "text": "除上述更正内容外，原公告其他内容不变。对于上述更正给投资者带来的不"
+        },
+        {
+          "id": "guiguang_correction:p1:l23",
+          "page": 1,
+          "text": "便，公司深表歉意，敬请广大投资者谅解。公司将切实加强信息披露的内部审核，"
+        },
+        {
+          "id": "guiguang_correction:p1:l24",
+          "page": 1,
+          "text": "提高信息披露质量，避免类似情况的发生。"
+        },
+        {
+          "id": "guiguang_correction:p1:l25",
+          "page": 1,
+          "text": "特此公告。"
+        },
+        {
+          "id": "guiguang_correction:p1:l26",
+          "page": 1,
+          "text": "贵州省广播电视信息网络股份有限公司董事会"
+        },
+        {
+          "id": "guiguang_correction:p1:l27",
+          "page": 1,
+          "text": "2025 年 9月 27 日"
+        }
+      ],
+      "title": "股票交易风险提示公告的更正公告",
+      "publisher": "贵广网络",
+      "number": "2025-051",
+      "category": "更正公告",
+      "category_origin": "系统分类 · 待核验交易所原始类别",
+      "type": "公告"
+    }
+  ],
+  "claims": [
+    {
+      "id": "haier_initial:c1",
+      "type": "fact",
+      "text": "海尔生物与上海莱士正在筹划由海尔生物通过向上海莱士全体股东发行A股股票的方式换股吸收合并上海莱士并发行A股股票募集配套资金",
+      "citations": [
+        {
+          "line_id": "haier_initial:p1:l17",
+          "quote": "价值、 推动公司高质量发展，海尔生物与上海莱士正在筹划由海尔生物通过向上"
+        },
+        {
+          "line_id": "haier_initial:p1:l18",
+          "quote": "海莱士全体股东发行  A 股股票的方式换股吸收合并上海莱士 （以下简称“本次"
+        },
+        {
+          "line_id": "haier_initial:p1:l19",
+          "quote": "合并”）并发行 A 股股票募集配套资金（以下简称“本次交易”或“本次重组”）。海"
+        }
+      ]
+    },
+    {
+      "id": "haier_initial:c2",
+      "type": "fact",
+      "text": "2024年12月20日，公司与上海莱士签署了《吸收合并意向协议》",
+      "citations": [
+        {
+          "line_id": "haier_initial:p3:l28",
+          "quote": "2024 年 12 月 20 日，公司与上海莱士签署了《吸收合并意向协议》，主要内"
+        }
+      ]
+    },
+    {
+      "id": "haier_initial:c3",
+      "type": "fact",
+      "text": "本次交易正处于筹划阶段，交易双方尚未签署正式的交易协议",
+      "citations": [
+        {
+          "line_id": "haier_initial:p4:l12",
+          "quote": "本次交易正处于筹划阶段， 交易双方尚未签署正式的交易协议， 具体交易方"
+        }
+      ]
+    },
+    {
+      "id": "haier_initial:c4",
+      "type": "fact",
+      "text": "经双方协商一致可终止/解除本意向协议",
+      "citations": [
+        {
+          "line_id": "haier_initial:p4:l10",
+          "quote": "5、双方同意，经双方协商一致可终止/解除本意向协议。"
+        }
+      ]
+    },
+    {
+      "id": "haier_progress:c1",
+      "type": "fact",
+      "text": "海尔生物正在筹划由海尔生物通过向上海莱士全体股东发行A股股票的方式换股吸收合并上海莱士并发行A股股票募集配套资金。",
+      "citations": [
+        {
+          "line_id": "haier_progress:p1:l8",
+          "quote": "青岛海尔生物医疗股份有限公司 （以下简称“海尔生物”或“公司”） 与上"
+        },
+        {
+          "line_id": "haier_progress:p1:l9",
+          "quote": "海莱士血液制品股份有限公司 （以下简称“上海莱士”） 正在筹划由海尔生物通"
+        },
+        {
+          "line_id": "haier_progress:p1:l10",
+          "quote": "过向上海莱士全体股东发行A 股股票的方式换股吸收合并上海莱士并发行A 股股"
+        },
+        {
+          "line_id": "haier_progress:p1:l11",
+          "quote": "票募集配套资金（以下简称“本次交易”或“本次重组”）。"
+        }
+      ]
+    },
+    {
+      "id": "haier_progress:c2",
+      "type": "fact",
+      "text": "截至本公告披露之日，公司以及有关各方正在积极推进本次交易事项的相关工作。",
+      "citations": [
+        {
+          "line_id": "haier_progress:p1:l19",
+          "quote": "截至本公告披露之日， 公司以及有关各方正在积极推进本次交易事项的相关"
+        }
+      ]
+    },
+    {
+      "id": "haier_progress:c3",
+      "type": "fact",
+      "text": "公司股票将继续停牌。",
+      "citations": [
+        {
+          "line_id": "haier_progress:p1:l21",
+          "quote": "所的相关规定， 公司股票将继续停牌。待相关事项确定后， 公司将及时发布相关"
+        }
+      ]
+    },
+    {
+      "id": "haier_progress:c4",
+      "type": "fact",
+      "text": "本次交易正处于筹划阶段，交易双方尚未签署正式的交易协议，具体交易方案尚存在不确定性。",
+      "citations": [
+        {
+          "line_id": "haier_progress:p1:l23",
+          "quote": "本次交易正处于筹划阶段， 交易双方尚未签署正式的交易协议， 具体交易方"
+        },
+        {
+          "line_id": "haier_progress:p1:l24",
+          "quote": "案尚存在不确定性。 本次重组尚需履行必要的内部决策程序，以及取得相关有权"
+        }
+      ]
+    },
+    {
+      "id": "haier_termination:c1",
+      "type": "fact",
+      "text": "公司决定终止筹划本次重大资产重组事项",
+      "citations": [
+        {
+          "line_id": "haier_termination:p1:l20",
+          "quote": "经审慎研究，公司决定终止筹划本次重大资产重"
+        }
+      ]
+    },
+    {
+      "id": "haier_termination:c2",
+      "type": "fact",
+      "text": "公司与上海莱士签订了《吸收合并意向协议》",
+      "citations": [
+        {
+          "line_id": "haier_termination:p2:l2",
+          "quote": "公司与上海莱士于 2024 年 12 月 20 日签订了《吸收合并意向协议》"
+        }
+      ]
+    },
+    {
+      "id": "haier_termination:c3",
+      "type": "fact",
+      "text": "《吸收合并意向协议》自动终止，交易双方均不承担违约责任",
+      "citations": [
+        {
+          "line_id": "haier_termination:p2:l27",
+          "quote": "筹划本次重大资产重组事项。同时， 《吸收合并意向协议》自动终止，交易双方均"
+        },
+        {
+          "line_id": "haier_termination:p2:l28",
+          "quote": "不承担违约责任。"
+        }
+      ]
+    },
+    {
+      "id": "haier_termination:c4",
+      "type": "fact",
+      "text": "交易相关方均未就具体方案最终签署正式实质性协议",
+      "citations": [
+        {
+          "line_id": "haier_termination:p3:l3",
+          "quote": "本次交易尚处于筹划阶段，交易相关方均未就具体方案最终签署正式实质性"
+        }
+      ]
+    },
+    {
+      "id": "guiguang_original:year",
+      "type": "fact",
+      "text": "原公告将该组财务数据所属年度写为2025年度，后已更正为2024年度。",
+      "citations": [
+        {
+          "line_id": "guiguang_original:p1:l21",
+          "quote": "公司 2025 年度实现营业收入 1,596,259,065.48 元，比上年同期减少"
+        }
+      ]
+    },
+    {
+      "id": "guiguang_correction:year",
+      "type": "fact",
+      "text": "公司明确将原披露的2025年度更正为2024年度。",
+      "citations": [
+        {
+          "line_id": "guiguang_correction:p1:l12",
+          "quote": "公司 2025 年度实现营业收入 1,596,259,065.48 元，比上年同期减少"
+        },
+        {
+          "line_id": "guiguang_correction:p1:l18",
+          "quote": "公司 2024 年度实现营业收入 1,596,259,065.48 元，比上年同期减少"
+        }
+      ]
+    },
+    {
+      "id": "guiguang_original:denial",
+      "type": "fact",
+      "text": "公司公告转述相关重组和重大算力合作传闻，并明确表示不涉及上述情形、传闻不属实。",
+      "citations": [
+        {
+          "line_id": "guiguang_original:p2:l3",
+          "quote": "公司关注到市场有关贵广网络与省国资体系内有关酒企、云上贵州企业重"
+        },
+        {
+          "line_id": "guiguang_original:p2:l4",
+          "quote": "组，以及公司与华为云开展重大算力合作相关传闻。经自查，公司不涉及上述情"
+        },
+        {
+          "line_id": "guiguang_original:p2:l5",
+          "quote": "形，市场关于公司的上述传闻不属实。"
+        }
+      ]
+    }
+  ],
+  "mode": "historical_verified",
+  "dataStatus": {
+    "label": "历史材料已核验入库",
+    "lastSuccess": "2026-11-02T04:54:17.579632+00:00",
+    "coverage": "海尔生物：2024-12-23 至 2025-01-07；贵广网络：2025-09-24 至 2025-09-27",
+    "scheduled": false
+  },
+  "provenance": "海尔事件判断来自顺序模型回放；贵广样本来自原文与模型关系提取后的人工核验。"
+}

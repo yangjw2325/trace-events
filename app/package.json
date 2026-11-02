@@ -1,0 +1,27 @@
+{
+  "name": "trace-investment-events",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 3100",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1 --port 3100",
+    "test": "node --test tests/*.test.mjs",
+    "db:migrate": "node db/migrate.mjs",
+    "db:check": "node db/check.mjs",
+    "jobs:daily": "node jobs/daily.mjs",
+    "jobs:resume": "node jobs/resume.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0",
+    "next": "16.4.3",
+    "pdf-parse": "2.4.5",
+    "pg": "8.23.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

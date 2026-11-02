@@ -1,0 +1,11 @@
+BEGIN;
+CREATE TABLE IF NOT EXISTS trace_queue(id text PRIMARY KEY,source_kind text NOT NULL,document_id text,status text NOT NULL DEFAULT 'pending',payload jsonb NOT NULL,detail jsonb NOT NULL DEFAULT '{}',attempts integer NOT NULL DEFAULT 0,created_at timestamptz NOT NULL DEFAULT now(),updated_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS trace_fetches(id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,document_id text,source text NOT NULL,checked_at timestamptz NOT NULL DEFAULT now(),status text NOT NULL,hash text,detail jsonb NOT NULL DEFAULT '{}');
+CREATE TABLE IF NOT EXISTS trace_analysis_cache(id text PRIMARY KEY,stage text NOT NULL,model text NOT NULL,prompt_version text NOT NULL,input_hash text NOT NULL,payload jsonb NOT NULL,created_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS trace_daily_jobs(id text PRIMARY KEY,status text NOT NULL,lease_until timestamptz NOT NULL,detail jsonb NOT NULL DEFAULT '{}',started_at timestamptz NOT NULL DEFAULT now(),finished_at timestamptz);
+CREATE TABLE IF NOT EXISTS trace_event_evidence(event_id text REFERENCES trace_events(id),document_id text NOT NULL,hash text NOT NULL,PRIMARY KEY(event_id,document_id,hash),FOREIGN KEY(document_id,hash) REFERENCES trace_document_versions(document_id,hash));
+CREATE TABLE IF NOT EXISTS trace_changes(event_id text,version integer,change_kind text NOT NULL,payload jsonb NOT NULL,created_at timestamptz NOT NULL DEFAULT now(),PRIMARY KEY(event_id,version),FOREIGN KEY(event_id,version) REFERENCES trace_event_versions(event_id,version));
+CREATE TABLE IF NOT EXISTS trace_claim_relations(id text PRIMARY KEY,event_id text REFERENCES trace_events(id),payload jsonb NOT NULL,created_at timestamptz NOT NULL DEFAULT now());
+CREATE INDEX IF NOT EXISTS trace_queue_pending ON trace_queue(status,created_at);
+DO $$ DECLARE t text;BEGIN FOREACH t IN ARRAY ARRAY['trace_queue','trace_fetches','trace_analysis_cache','trace_daily_jobs','trace_event_evidence','trace_changes','trace_claim_relations'] LOOP EXECUTE format('ALTER TABLE %I ENABLE ROW LEVEL SECURITY',t);EXECUTE format('REVOKE ALL ON TABLE %I FROM anon,authenticated',t);END LOOP;END $$;
+COMMIT;

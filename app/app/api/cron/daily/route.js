@@ -1,0 +1,3 @@
+import crypto from 'node:crypto';import{runDaily}from'../../../../lib/ingestion/daily.js';
+export const runtime='nodejs';export const maxDuration=300;export const dynamic='force-dynamic';
+export async function GET(req){const expected=process.env.CRON_SECRET;const actual=req.headers.get('authorization')||'';if(!expected||actual.length!==('Bearer '+expected).length||!crypto.timingSafeEqual(Buffer.from(actual),Buffer.from('Bearer '+expected)))return Response.json({error:'Unauthorized'},{status:401});try{return Response.json(await runDaily(),{headers:{'Cache-Control':'no-store'}})}catch{return Response.json({error:'任务失败，已记录，保留上一成功版本'},{status:503})}}
