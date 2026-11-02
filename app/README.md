@@ -1,4 +1,4 @@
-# 溯源 Web 应用（本地实现）
+# 溯源 Web 应用
 
 基于已确认原型实现 Next.js + React 页面，使用真实的历史公告数据。
 
@@ -26,7 +26,7 @@ npm run start
 
 - 当前网页读取已核验历史数据；搜索不会调用模型。
 - 采集发布与站内通知已接通：新事件或重要变化在同一事务保存版本和通知，同时关注公司与事件只通知一次。历史回放测试通知不导入真实体验用户。
-- Supabase托管数据库及私有原文存储已接通；每日调度由GitHub Actions承担，上线状态以云端任务记录为准。
+- Supabase托管数据库及私有原文存储已接通；网站已部署至 https://trace-events.vercel.app ，每日任务由GitHub Actions执行，首轮云端任务与生产验收均通过。
 - 交易所原始分类尚待补齐，当前分类标记为系统分类。
 - 生产部署使用 postgres 配置，PDF与资讯片段保存在私有云存储；SQLite仅用于本地回放。
 
@@ -56,3 +56,9 @@ npm run jobs:automated
 网站由Vercel托管，Root Directory为app，Node.js 24，区域pdx1与数据库相近。后台任务由私有仓库的GitHub Actions执行，UTC 01:00（北京时间09:00）计划启动；平台高负载可能延迟。支持workflow_dispatch手动验收和失败重跑。Vercel不再重复调度。配置服务端环境变量及Actions Secrets，验证成功后设置 CRON_SCHEDULE_ENABLED=true；真实密钥不提交代码仓库。现有Cron HTTP入口仍要求CRON_SECRET鉴权。
 
 模型核验无法替代人工事实判断；待核验队列目前通过数据库及命令查看，未新增产品审核页。交易所分类映射、来源失效后的持续探测和超出查询窗口的补采尚未实现。
+
+## 生产环境
+
+正式网址：https://trace-events.vercel.app 。部署目录app，Node.js固定24.x。每日后台任务已经注册并完成首轮云端验证，关闭本地电脑不影响任务运行。
+
+GitHub到Vercel的代码自动部署尚未关联；当前采用Vercel CLI发布，后续改代码需要重新部署。每日采集与分析由GitHub Actions独立执行。完整验收结果见仓库根目录《上线与验收记录.md》。
