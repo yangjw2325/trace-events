@@ -11,7 +11,8 @@
     "db:migrate": "node db/migrate.mjs",
     "db:check": "node db/check.mjs",
     "jobs:daily": "node jobs/daily.mjs",
-    "jobs:resume": "node jobs/resume.mjs"
+    "jobs:resume": "node jobs/resume.mjs",
+    "jobs:automated": "node jobs/automated.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "2.118.0",
