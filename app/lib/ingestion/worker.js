@@ -5,15 +5,15 @@ import {processQueueItem,safeError} from './daily.js';
 export function retryable(code){return /^(SOURCE_HTTP_(429|5\d\d)|TimeoutError|TypeError|ECONNRESET|ETIMEDOUT|EAI_AGAIN|EVENT_VERSION_CHANGED|IFIND_TOOL_FAILED)$/.test(code)}
 
 // One worker per workflow; row locks also protect manual concurrent invocations.
-export async function drainQueue({maxItems=40,budgetMs=25*60*1000}={}){
- const pool=getPool(),deadline=Date.now()+budgetMs,processed=[];
+export async function drainQueue({maxItems=40,budgetMs=25*60*1000,pool=getPool(),snapshot=()=>createPostgresStore().snapshot(null),process=processQueueItem}={}){
+ const deadline=Date.now()+budgetMs,processed=[];
  await pool.query("UPDATE trace_queue SET status='pending' WHERE status='processing' AND (detail->>'lease_until')::timestamptz<now()");
  await pool.query("UPDATE trace_queue SET status='pending' WHERE status='retry' AND attempts<3");
  for(let n=0;n<maxItems&&Date.now()<deadline;n++){
   const claimed=await pool.query(`UPDATE trace_queue SET status='processing',updated_at=now(),detail=detail||jsonb_build_object('lease_until',now()+interval '10 minutes')
    WHERE id=(SELECT id FROM trace_queue WHERE status='pending' AND source_kind IN ('notice','news') ORDER BY CASE source_kind WHEN 'notice' THEN 0 ELSE 1 END,created_at,id FOR UPDATE SKIP LOCKED LIMIT 1) RETURNING *`);
-  if(!claimed.rowCount)break;const row=claimed.rows[0];
-  try{const snapshot=await createPostgresStore().snapshot(null),result=await processQueueItem(pool,row,snapshot),status=result.review?'review':'processed';
+  if(!claimed.rowCount){const retry=await pool.query("UPDATE trace_queue SET status='pending' WHERE status='retry' AND attempts<3 RETURNING id");if(!retry.rowCount)break;await new Promise(r=>setTimeout(r,1000));continue}const row=claimed.rows[0];
+  try{const data=await snapshot(),result=await process(pool,row,data),status=result.review?'review':'processed';
    await pool.query('UPDATE trace_queue SET status=$2,detail=$3,attempts=attempts+1,updated_at=now() WHERE id=$1',[row.id,status,result]);processed.push({id:row.id,status,result});
   }catch(e){const error=safeError(e),status=retryable(error)&&row.attempts<2?'retry':'review';await pool.query('UPDATE trace_queue SET status=$2,detail=$3,attempts=attempts+1,updated_at=now() WHERE id=$1',[row.id,status,{error}]);processed.push({id:row.id,status,error})}
  }
