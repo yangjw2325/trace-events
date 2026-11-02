@@ -1,0 +1,26 @@
+'use client';
+import {Fragment,useState} from 'react';
+import {claimTypes,claimsForDocument,citationPosition,financialRows} from '../../lib/evidence-presentation.js';
+export function CitationText({claim,doc}){return <div className="citation-content">{claim.citations.map((ref,i)=><Fragment key={ref.line_id+':'+i}><blockquote>{ref.quote}</blockquote><span className="muted small">{citationPosition(ref,doc)}</span></Fragment>)}</div>}
+function Citation({claim,doc}){return <details className="quote-toggle"><summary>查看原文引用</summary><CitationText claim={claim} doc={doc}/></details>}
+function FinancialTable({rows,doc}){
+ const [opened,setOpened]=useState([]);
+ return <div className="financial-table-wrap"><table className="facts-table"><thead><tr><th>期间</th><th>营收</th><th>归母净利润</th><th>依据</th></tr></thead><tbody>{rows.map(row=>{const active=opened.includes(row.claim.id),id='quote-'+row.claim.id;return <Fragment key={row.claim.id}><tr><th scope="row">{row.period}</th><td><strong>{row.revenue.value}</strong>{row.revenue.change&&<span>{row.revenue.change}</span>}</td><td><strong>{row.profit.value}</strong>{row.profit.change&&<span>{row.profit.change}</span>}</td><td><button className="quote-inline-button" aria-expanded={active} aria-controls={id} onClick={()=>setOpened(items=>active?items.filter(x=>x!==row.claim.id):[...items,row.claim.id])}>{active?'收起引用 −':'查看引用 ＋'}</button></td></tr>{row.extra&&<tr className="financial-extra"><td colSpan={4}>{row.extra}</td></tr>}{active&&<tr className="full-quote" id={id}><td colSpan={4}><CitationText claim={row.claim} doc={doc}/></td></tr>}</Fragment>})}</tbody></table></div>;
+}
+export function relationFields(relation){return{label:relation.field==='year'?'数据所属年度':relation.field||'更正内容',before:relation.before||relation.old_value,after:relation.after||relation.new_value}}
+export function ChangeFields({fields}){return fields.filter(f=>f.before&&f.after).map((f,i)=><div className="notification-diff" key={i}><span className="diff-field">{f.label}</span><span className="previous-value">{f.before}</span><span className="diff-arrow">→</span><strong>{f.after}</strong></div>)}
+export function EvidencePanel({doc,allClaims,relations=[],selected,onLocate}){
+ const claims=claimsForDocument(doc,allClaims),groups=Object.keys(claimTypes).map(type=>({type,claims:claims.filter(c=>c.type===type)})).filter(g=>g.claims.length);
+ const corrections=relations.filter(r=>r.type==='correction'&&(r.source_document_id===doc.id||r.target_document_id===doc.id));
+ const excerpt=doc.completeness==='excerpt';
+ return <details className={'evidence '+(selected?'evidence-focus':'')} id={'evidence-'+doc.id}>
+  <summary><span><span className="source-type">{doc.type==='新闻'?'新闻报道':'公司公告'}{excerpt?' · 片段':''}</span><strong>{doc.title}</strong>{groups.length>0&&<span className="evidence-counts">{groups.map(g=>g.claims.length+'项'+claimTypes[g.type]).join(' · ')}</span>}</span><span className="expand-label"/></summary>
+  <div className="evidence-body"><p className="evidence-meta">{doc.publisher} · {doc.published_date}{doc.number?' · 公告编号 '+doc.number:''}</p>
+   {corrections.map((r,i)=><section className="claim-section" key={'correction-'+i}><div className="claim-section-heading"><span className="tag amber">{r.target_document_id===doc.id?'原表述已更正':'更正对照'}</span></div><ChangeFields fields={[relationFields(r)]}/>{r.source_document_id!==doc.id&&<button className="brief-source" onClick={()=>onLocate(r.source_document_id)}>定位更正依据 ↓</button>}{r.source_document_id===doc.id&&r.citations?.length>0&&<Citation claim={{citations:r.citations}} doc={doc}/>}</section>)}
+   {groups.map(group=>{const rows=group.type==='fact'?financialRows(group.claims):[],structured=new Set(rows.map(r=>r.claim.id));return <section className="claim-section" key={group.type}><div className="claim-section-heading"><span className="tag gray" title={group.type==='fact'?'按材料的陈述方式分类，核实状态另行标注':undefined}>{claimTypes[group.type]}</span><span className="muted small">{group.type==='fact'?(doc.type==='新闻'?'新闻转述':'公司公告'):(group.type==='opinion'&&doc.type==='新闻'?'报道中的观点':'')}</span></div>{rows.length>0&&<FinancialTable rows={rows} doc={doc}/>} {group.claims.filter(c=>!structured.has(c.id)).map(c=><div className="claim-row" key={c.id}><p>{c.text}</p><Citation claim={c} doc={doc}/></div>)}</section>})}
+   {!claims.length&&!corrections.length&&<p className="muted small">该材料的具体表述可从留存原文查看。</p>}
+   <div className="evidence-footer"><div className="row"><a className="text-link" href={doc.source} target="_blank" rel="noreferrer">{doc.type==='新闻'?'来源原文':'公告原文'} ↗</a><a className="text-link" href={'/api/source/'+doc.id+'?hash='+doc.sha256} target="_blank" rel="noreferrer">{excerpt?'留存片段':'留存PDF'} ↗</a></div><details className="source-metadata"><summary>材料信息</summary><p>披露日期：{doc.published_date}（日级精度）<br/>实际抓取：{doc.fetched_at?new Date(doc.fetched_at).toLocaleString('zh-CN',{timeZone:'Asia/Shanghai',hour12:false}):'未知'}<br/>发生时间：见原文具体说法<br/>分类：{doc.category}<br/>分类来源：{doc.category_origin}<br/>文件指纹：{doc.sha256}</p></details></div>
+   <details className="original-text"><summary>{excerpt?'查看完整留存片段':'查看完整提取原文'}</summary><div>{doc.paragraphs.map((p,i)=><p key={p.id} className="source-line"><span>{excerpt?'第'+(i+1)+'段':p.page+'页'}</span>{p.text}</p>)}</div></details>
+  </div>
+ </details>;
+}

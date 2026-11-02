@@ -17,9 +17,10 @@ export async function publishDecision(c,{doc,topic,decision,expectedVersion,now=
  const relations=[...(prior.payload.relations||[]),...(decision.relations||[]).map(r=>({...r,source_document_id:doc.id,source_hash:doc.sha256}))];const payload={...prior.payload,id,title:decision.title,kind:decision.kind,status:decision.status,summary:decision.summary,date:doc.published_date,updated_at:now,companies:[...new Set([...(prior.payload.companies||[]),...topic.company_ids])],roles:{...(prior.payload.roles||{}),...(decision.roles||{})},documents:docs,relations,uncertainties:decision.uncertainties||[],importantVersion:n};
  await c.query('UPDATE trace_events SET current_version=$2,payload=$3 WHERE id=$1',[id,n,payload]);
  for(const relation of decision.relations||[])await c.query('INSERT INTO trace_claim_relations(id,event_id,payload) VALUES($1,$2,$3) ON CONFLICT DO NOTHING',[digest({event:id,version:n,relation}),id,relation]);
- const change={before:previous,after:decision.summary,reason:decision.reason,date:doc.published_date,generated_at:now,source_document_id:doc.id,source_hash:doc.sha256,change_kind:decision.change_kind};
+ const fields=(decision.relations||[]).filter(r=>r.type==='correction'&&r.before&&r.after).map(r=>({label:r.field||'更正内容',before:r.before,after:r.after}));
+ const change={notification_type:isNew?'new_event':'event_change',company_ids:payload.companies,event_title:payload.title,before_status:prior.payload.status||null,after_status:decision.status,fields,before:previous,after:decision.summary,reason:decision.reason,date:doc.published_date,generated_at:now,source_document_id:doc.id,source_hash:doc.sha256,change_kind:decision.change_kind};
  await c.query('INSERT INTO trace_changes VALUES($1,$2,$3,$4,now())',[id,n,decision.change_kind,change]);
  const notifications=await c.query(`INSERT INTO trace_notifications(user_id,event_id,version,payload)
- SELECT DISTINCT f.user_id,$1::text,$2::integer,$3::jsonb FROM trace_follows f WHERE (f.kind='event' AND f.target=$1) OR (f.kind='company' AND f.target=ANY($4::text[])) ON CONFLICT DO NOTHING`,[id,n,change,payload.companies]);
+ SELECT f.user_id,$1::text,$2::integer,$3::jsonb||jsonb_build_object('follow_reasons',jsonb_agg(jsonb_build_object('kind',f.kind,'target',f.target,'followed_at',f.created_at))) FROM trace_follows f WHERE (f.kind='event' AND f.target=$1) OR (f.kind='company' AND f.target=ANY($4::text[])) GROUP BY f.user_id ON CONFLICT DO NOTHING`,[id,n,change,payload.companies]);
  return{event_id:id,version:n,changed:true,notifications:notifications.rowCount};
 }
