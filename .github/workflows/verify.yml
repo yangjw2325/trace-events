@@ -1,0 +1,21 @@
+name: Production smoke check
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tests/http.test.mjs
+        env:
+          TRACE_TEST_URL: https://trace-events.vercel.app
+      - run: node jobs/verify-production.mjs
