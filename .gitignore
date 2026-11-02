@@ -4,3 +4,4 @@ node_modules/
 .next/
 *.sqlite*
 .DS_Store
+.vercel
